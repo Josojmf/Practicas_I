@@ -1,0 +1,13 @@
+{
+    "appUrls": {
+        "blackboardNebrija":"https://campusvirtual.nebrija.es/?new_loc=%2Fultra%2Finstitution-page"
+    },
+"users": {
+    "user1":"jfernandezg15@alumnos.nebrija.es",
+    "userInvalid":"test@notvalid.es"
+},
+"passwords": {
+    "password1":"lyoko3110J",
+    "passwordInvalid":"notvalidpwd"
+}
+}

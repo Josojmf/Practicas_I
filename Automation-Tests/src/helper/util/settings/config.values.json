@@ -1,0 +1,14 @@
+{
+  "appsUrls":{
+    "portalServiciosURL": "https://academico.nebrija.es/ServiciosApp/",
+    "blackboardURL": "https://campusvirtual.nebrija.es"
+  },
+  "users": {
+    "validUser": "jfernandezg15@alumnos.nebrija.es",
+    "notValidUser": "notValidUser@notValidUser.nope"
+  },
+  "passwords": {
+    "validPassword": "lyoko3110J",
+    "notValidPassword": "notValidPassword"
+  }
+}

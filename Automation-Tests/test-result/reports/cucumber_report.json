@@ -1,0 +1,67 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "portal-de-servicios-feature;portal-de-servicios-main-page-validation",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "portal de servicios main page validation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4604500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is logged in as valid user on portal de servicios",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User is in main page of portal de servicios",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should be able to see the url containing ServiciosApp",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@testPortaldeServicios",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "portal-de-servicios-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "portal de servicios feature",
+    "tags": [],
+    "uri": "src\\test\\features\\portalServicios.feature"
+  }
+]
