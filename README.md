@@ -6,6 +6,10 @@
 
 ### Steps to run:
 #### 1.
+` git clone https://github.com/Josojmf/Practicas_I.git ` </br>
+</br>
+` cd Practicas_I ` </br>
+</br>
 ` cd Automation ` </br>
 </br>
 ` npm install `
