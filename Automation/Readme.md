@@ -26,3 +26,27 @@
 } 
 
 #### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
+
+#### 3. Run tests form Academico nebrija App
+
+#### Main Page Academico Nebrija
+
+` npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@@academicoNebrija" --BWSR="chrome" `
+
+#### Main Page Login with valid Username and wrong password
+
+` npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrijaLoginWithInvalidPassword" --BWSR="chrome" `
+
+####  Main Page Login with invalid Username and wrong password
+
+`  npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrijaLoginWithInvalidUser" --BWSR="chrome" `
+
+####  Main Page Login with Empty User
+
+`  npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrijaLoginWithEmptyUser" --BWSR="chrome" `
+
+
+#### Admissions Page
+
+` npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@validationOfAdmisionesPage" --BWSR="chrome" ` 
+#### 
