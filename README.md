@@ -7,6 +7,7 @@
 ### Steps to run:
 #### 1.
 ` cd Automation ` </br>
+</br>
 ` npm install `
 #### 2.
 #### Add user and password to file: " src\helper\util\settings\config.values.json "
