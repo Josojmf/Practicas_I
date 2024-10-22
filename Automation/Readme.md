@@ -34,7 +34,7 @@
 
 #### Main Page Academico Nebrija
 
-` npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@@academicoNebrija" --BWSR="chrome" `
+` npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrija" --BWSR="chrome" `
 
 ##### You have to verify MFA with your outlook application when logging in
 

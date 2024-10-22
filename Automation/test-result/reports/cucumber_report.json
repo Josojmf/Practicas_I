@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 256862999
+              "duration": 291000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 29090093599,
+              "duration": 21578680398,
               "error_message": "locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Aprobar una solicitud en mi aplicación Outlook Mobile' })\u001b[22m\n\n    at loginPage.<anonymous> (C:\\Users\\josoj_vlmzb1d\\OneDrive\\Escritorio\\INFORMATICA\\4_Curso\\Practicas_I\\Automation\\src\\pages\\mlaPage.ts:40:134)\n    at fulfilled (C:\\Users\\josoj_vlmzb1d\\OneDrive\\Escritorio\\INFORMATICA\\4_Curso\\Practicas_I\\Automation\\src\\pages\\mlaPage.ts:5:58)"
             }
           },
@@ -88,7 +88,7 @@
             "hidden": true,
             "result": {
               "status": "failed",
-              "duration": 1431300,
+              "duration": 1245900,
               "error_message": "page.screenshot: Target page, context or browser has been closed\n    at World.<anonymous> (C:\\Users\\josoj_vlmzb1d\\OneDrive\\Escritorio\\INFORMATICA\\4_Curso\\Practicas_I\\Automation\\src\\hooks\\hooks.ts:75:34)\n    at C:\\Users\\josoj_vlmzb1d\\OneDrive\\Escritorio\\INFORMATICA\\4_Curso\\Practicas_I\\Automation\\src\\hooks\\hooks.ts:8:71\n    at __awaiter (C:\\Users\\josoj_vlmzb1d\\OneDrive\\Escritorio\\INFORMATICA\\4_Curso\\Practicas_I\\Automation\\src\\hooks\\hooks.ts:4:12)\n    at World.<anonymous> (C:\\Users\\josoj_vlmzb1d\\OneDrive\\Escritorio\\INFORMATICA\\4_Curso\\Practicas_I\\Automation\\src\\hooks\\hooks.ts:74:12)"
             }
           }
