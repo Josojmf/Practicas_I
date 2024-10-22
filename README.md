@@ -27,6 +27,10 @@ cd Automation
 ```
  npm install 
  ```
+
+````
+npx playwright install
+````
 #### 2.
 #### Add user and password to file: " src\helper\util\settings\config.values.json "
 #### In format: 
