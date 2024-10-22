@@ -1,11 +1,16 @@
 {
-  "users": {
-    "user1": "jfernandezg15@alumnos.nebrija.es",
-    "notvalidUser": "notvalid@notvalid.com"
+  "urls":{
+      "BlackBoard":"https://campusvirtual.nebrija.es/",
+      "AcademicoNebrija":"https://academico.nebrija.es/ServiciosApp"
   },
-  "passwords": {
-    "password1": "testtest",
-    "notvalidUser": "notvalid"
+  "users":{
+      "ValidUser":"jfernandezg15@alumnos.nebrija.es",
+      "NotValidUser":"notValidUser@notvalid.nope",
+      "ValidUserWrongPassUsername":"jfernandezg15@alumnos.nebrija.es"
+  },
+  "passwords":{
+      "ValidPassword":"lyoko3110J",
+      "NotValidPassword":"notValidPassword",
+      "ValidUserWrongPassPassword":"notValidPassword"
   }
-}
-
+} 

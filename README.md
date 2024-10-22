@@ -54,7 +54,7 @@ cd Automation
 #### Main Page Academico Nebrija
 
 ```
- npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@@academicoNebrija" --BWSR="chrome"
+ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrija" --BWSR="chrome"
 ```
 
 #### Main Page Login with valid Username and wrong password
