@@ -1,0 +1,312 @@
+[
+  {
+    "name": "OAMRequestContext_academico.nebrija.es_443_517168",
+    "value": "QqhKMJhzRA0fQahgfwCdHA==",
+    "domain": "academico.nebrija.es",
+    "path": "/",
+    "expires": 1729529065.160357,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "OAM_JSESSIONID",
+    "value": "5Wiv8prlNWCKGLSxX1p_EVnlJ-mB_zEzROIEsQakrl1OMT1S99V7!-1261854651",
+    "domain": "ssoacademico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "OAM_REQ_COUNT",
+    "value": "VERSION_4~2",
+    "domain": "ssoacademico.nebrija.es",
+    "path": "/",
+    "expires": 1729529665.222758,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "esctx-36WrGnT92oQ",
+    "value": "AQABCQEAAADW6jl31mB3T7ugrWTT8pFeGMPNt15Z_DlpNPZR5SYW7caIs3dj1axFVkv2Zm_EC13f4EnU4WGVn9tmfX4iTg7sV1Aer6SxfO_5sFT9YTrTMlMKYLOLjgmag2JUDgAvpCWjUotV8iFGf1aMSOTeuA41ebHdOK23L2HDgPW7IKSFmCAA",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "x-ms-gateway-slice",
+    "value": "estsfd",
+    "domain": "login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "stsservicecookie",
+    "value": "estsfd",
+    "domain": "login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "AADSSO",
+    "value": "NA|NoExtension",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "SSOCOOKIEPULLED",
+    "value": "1",
+    "domain": "login.microsoftonline.com",
+    "path": "/",
+    "expires": 1729528825,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "esctx-JhKphQFqjCo",
+    "value": "AQABCQEAAADW6jl31mB3T7ugrWTT8pFerOtIxRo_1QHI1J9SlopMyDQdyB8to399dveoRtXJ8bVpg3RX7qqkFHzdMV3pP3pz55q5fYNRRxwfbv-p0ieHlOhRPEJysckO_yrgNsBz4m9a1BGYroB-aiSU-xCNEmaS3UDHNoQW7Tmc3OdLxYysqyAA",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "brcap",
+    "value": "0",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": 1763228366,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "wlidperf",
+    "value": "FR=L&ST=1729528772641",
+    "domain": ".microsoftonline.com",
+    "path": "/",
+    "expires": 1763228372,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ESTSAUTHLIGHT",
+    "value": "+304253b5-857b-4324-812f-e8272b215c5a",
+    "domain": "login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "esctx-ppTVMbFccaM",
+    "value": "AQABCQEAAADW6jl31mB3T7ugrWTT8pFe6M0L-IzXaYyChYKWmLP4yJiJTVnIfiueG137FVTe2V9SiWma_a4KMfaLCPHiD_YRg5GCTy_DF8fvlS4AVxngVJD_Oa90qyPy2LYl5OmtVCfwZDkokHpKYyCpgv8xwe9-wwRN3jLxXuZITuZBCbs1KSAA",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "esctx",
+    "value": "PAQABBwEAAADW6jl31mB3T7ugrWTT8pFeRraKs56-wfl-UnAwMQLTT8IvB0PZlSBI85zdXj-eM9tnUTcB2XgOMFj1BKuy2oZlgYhNrOnuSh4PbQ6V6sybFHDxPtCFYNpzDfFS_924KrD_lTZ0rUAI37WKfRRginXGKlITMSovpGyfUYa48e2dD6AaDGmcyS-xbZFRYgD0UKogAA",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "esctx-vfU78EMFQ",
+    "value": "AQABCQEAAADW6jl31mB3T7ugrWTT8pFe4p65lh_sB0P12BvMfKeOTFhpZObC9HVRUrLqS8YMu9Jq2m8KNRsdiI_-LTZpE1D2rgjBVcI1IamHWGUZJCT505ffPJNkGkc_YX-osKcwhP254TX5D2RR26zs2NetJzjHw1XHvnzW3CL3A5MdSiJD8yAA",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "uaid",
+    "value": "6603d641d2214cfda01b100dab9d9ef3",
+    "domain": ".login.live.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "MSPRequ",
+    "value": "id=N&lt=1729528785&co=0",
+    "domain": ".login.live.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ESTSAUTHPERSISTENT",
+    "value": "0.AQUAkBgw2nzNNk-9eDEHQBAKWgDFPuBWF29JskWCfJ56UlkbAWc.AgABFwQAAADW6jl31mB3T7ugrWTT8pFeAwDs_wUA9P-e6yiC7PjAodjA5ypm6Iok72GR8fsx4p1jWcGD6kN5rbyX67wRSpDdKDdGc_y1UiJlnkoLaqpR-IhJTahcKZoeXLqYlnbW3-Ry_QkJr0_bpxa0SAYl7fzcfqgKQHVrharQ4F0gBOGlS_wJ3uPJH9UAHmXce-HB7aaWfLZ6GXXPe0b6MtFYYTG_QFYCSAOFRdemF-MxunPavtUgbUPiV40cbHHPumOALU7g3-HDINnTEYQX7FB7brLkQdSvKOcyLdIqfVi3c3tIyVwJzFohiImbOF7l20pfhranHKusiQJPX801l5TK3XlkC0IAGWJIXUP-TKU-nRLnJJrEEu90rotYPC-C29pjdAUVf2UDtBkZOTZnG-0EGoRwX_6HqO1_nXMVmC25UGhJ5rdGNoLB55HS3vS0FyHdaCfjiLyOx0Mxjy_UzKrbkKAQstNcN_C09FK-aJd3UbNbJ8FrTBYhMsuKkhdxqzDyIgzREEke3nK54jbjx1uUPHBqALCVfeZcM3ZHSmeAblD9wDqGlVdJYoszMP8-zigCMtXeiH9a-2aCXTT8SNrw6uvfqfodzpUrW9NJb0Uwvy81GgFFIVRNAcTvgXUMLwh5ki9P5tJKuprGg3kRBjXozll_wqhgcF9WbNrNPlAlBDG94oos-INYLk28phAc3fL-v21oAIGkH7yNIYq54wJINjSvMoBYKbyhZEl2UX82Xpudr-j9vkVbAL8allqusb8M46t3VT-xCg",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": 1737304785.990021,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ESTSAUTH",
+    "value": "0.AQUAkBgw2nzNNk-9eDEHQBAKWgDFPuBWF29JskWCfJ56UlkbAWc.AgABFwQAAADW6jl31mB3T7ugrWTT8pFeAwDs_wUA9P_acR0M8C5x9gm2PLUYUGa6nnznKuKGjOjSz1NMTCO2mzAiqYh7e8KnRY63GayYZzFv__1byXcmQQ",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "buid",
+    "value": "0.AQUAkBgw2nzNNk-9eDEHQBAKWgDFPuBWF29JskWCfJ56UlkbAWc.AQABGgEAAADW6jl31mB3T7ugrWTT8pFeIqkV75whuU6PZnKRZ3Vj12UgyIqa5PKoUXdXGvxiJyQjdq-wdRk6yFYfiDKPjIcgcG6UB3Q6Ow-PX3FjQNqf8SLayL6Ub8mZjBOFhzpSeTcDXhDhwlOPtbvkflw0zgQK9rG7I3ffkwzZeuHA_LYzXnJfu4ObPK4be0JBL4gI0DIgAA",
+    "domain": "login.microsoftonline.com",
+    "path": "/",
+    "expires": 1732120785.990384,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "CCState",
+    "value": "RWhJS0VQeWpXM2l2aXRSRGdkOE5xYkFxTmdNPQ==",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": 1730392785.990483,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "SignInStateCookie",
+    "value": "CAgABFgIAAADW6jl31mB3T7ugrWTT8pFeAwDs_wUA9P9rWRDdyGfdsPzTZlHosDYMTZpf3eTZkpFJhsKkb-30pVPZSsd3BNYnYZAKeAM67zfT_b86h8im1BJ07JR_U603IOxqrtR8oO0rwAQzQlTQfzseQx9zC4nSTTLIp66LgLUR1c0DIX8bIbvOB2RT3B7_9412ZLK1tt47UCdCBNT1KzZFSRosiGNzTbl4UiP5tH-5MKV7teCskoOM0tXCoTr-5l6vcqke3fn6jIqvYc_wfFbz9v-xnWu0U2U8SEuHn6_DqiGUFImYz8TXTfQrE8Z6YOhL",
+    "domain": ".login.microsoftonline.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "fpc",
+    "value": "AsZdHdIdFn9FuEU51c24geM6bzLEAQAAAL16qN4OAAAAZFI4-AEAAADEeqjeDgAAAHKjpg0CAAAA0Hqo3g4AAAA",
+    "domain": "login.microsoftonline.com",
+    "path": "/",
+    "expires": 1732120785.990659,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ORA_OSFS_SESSION",
+    "value": "id-bSNSqta2dZ-zHuieZMWZZsgPOGzvYhDvPMfxj3-i",
+    "domain": "ssoacademico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "OAM_REQ_0",
+    "value": "invalid",
+    "domain": "ssoacademico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "OAM_REQ_1",
+    "value": "invalid",
+    "domain": "ssoacademico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "OAM_ID",
+    "value": "VERSION_5~9WgyOc8esnyOxJo4D/q+ZA==~wd88IBZyQasPZAIa2wDczg9jFvvB2KgRueS4ycTIgG7+BhROimAIMeNFXyTeaqHomCcy4DDgKOMcNRSJcQHbKP5iaVZlOpBUdQqpTmBUtKqwRNwCTcdJubguIlUxvKW1xL86QV+gctG8sX1ghISkJS2Ggy6uYuM0dFE0nBqaFH1GUkqAKMroIXaVlih8epgCzKt2FP3GuzgwruBhWFq2FdthuYtmx6FSbNVRpsKEpDJf83vxM5/flha7yPFDifL8wWU7LuPNqjyc4EUH9Izp7MJC++QX4HBpERVAH5Lh6QZyyG+rP0S8KPJ1JGEALxC3da+u8sTOzyW6VnD3SOX4/SQOh5XWmWta9IJo9PMzEmhgi3S4R3qwEVTdDdIOYfZ3BAKLpXRC1IX5YRbneOrCD1/+UWQIEbzcuK13sqVk09AlZGsDJ1qgjy1qfUlXBHG3gb6z+CCvzVxWNmAtmt71m15JUq/ck7GbcGQ4Kfjz/SdLqaBku2t2BrQmXcgBYvx9iLEjp2vCjj7skMAF2op8lTzJ6m89WdoYUPGOPjY2UVZUSTK/9wZeAk4PdiZQxBPasnMW1c5Il4dByK/QK6zZO3ZfnPAYzmYe9cg+/9jAbVM=",
+    "domain": "ssoacademico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "OAMAuthnCookie_academico.nebrija.es_443",
+    "value": "353149013851f575d8fa4381a7a32cf0856fb59f%7EtdS%2FOjisoNB9ShMPhi7mFa7sn%2FaD10TQAZCCtmpJzFx%2BGRyJvkRnCnAh%2BbrZREiIwN7NllwsU7Veb7Pe%2Bp7O589rFkbrHZ2EGwBrTjYc0wlLCv7%2BBB12xEIWC%2BzQq4hT5RAwbXrwqt3RmHuL4SnEbLmOCpIQUwE6EV8ltr9bfUN1shpPdLM6ztkfs8i7duqsJSF%2F583RhOL6fNcF0BCcoJWECznviPjkYVo1b8U%2F%2FkZRf6u2SCBHYw0VSOPueSUYg%2BeIW616OEknFnKr%2FCFlAtGCdAagPWi3iBCa78MQ3KEOKSnasBOE8RxUcL1CM3QJyDgW3yr%2BGDiFJxrzeBD3xKuicIrVt6whP1gjPnS1ydACvkodcvSbjAkLd36SQnlzm%2FqnjnttT3Zfm4TpsZqCytcElpBTddTDhp%2BcWsB9CJ6RbaZJ3hxMGZwuNWFnoMqufh5b88KUgAbk5%2BsiFEM%2BCxBS%2FUau%2FoWy34GwzOyHtbP0hfc62%2B6Dlkb%2FjH6vCGu6zJIVx8s3lNH0x06nC2Ygpk7%2F40pFso2vzQyjS%2BAJWnmAKuWdCYT%2B0S0Py61l8QTfo5WG9qGjJ3Mm%2F0QO1%2Bqt5sLoSogn42ZBsOH0BLst1vfeYhRo7QQgwekhqzxCxCO6U00Adlk79hcBgPDNLSKEDQ%3D%3D",
+    "domain": "academico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "OAMAuthnHintCookie",
+    "value": "1",
+    "domain": ".nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "Apache",
+    "value": "c1c05390.624ff4cedc5f6",
+    "domain": "academico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "PortalJSESSION",
+    "value": "JDGv8u0wAKQ0w4511DiOt5u74CU6Qip8Z8JvV_1UnHdOxvWYai74!-1897291096",
+    "domain": "academico.nebrija.es",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]
