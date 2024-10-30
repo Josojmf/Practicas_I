@@ -14,7 +14,7 @@ export default class AdmisionesPage{
     async waitForNavigation(){
         await this.page.waitForLoadState("networkidle");
     }
-
+    
     async checkReconocimientoCreditosPage(){
        //check h1 of page
        const title = await this.page.locator("//html/body/div[2]/form/div/div/div/div/div[2]/div/div[2]/div/div[1]/span/h1");

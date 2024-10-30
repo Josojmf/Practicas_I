@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>File Upload Service</h1>
+        <nav>
+            <nav>
+                <a href="{{ url_for('main.index') }}">Home</a>
+                <a href="{{ url_for('main.list_files') }}">Files</a>
+                <a href="{{ url_for('main.weather') }}">Weather</a>
+                <a href="{{ url_for('main.chat') }}">Chat</a>
+            </nav>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Viewing: {{ filename }}</h2>
+        <pre>{{ content }}</pre>
+        <a href="{{ url_for('main.list_files') }}">Back to file list</a>
+    </div>
+    <footer>
+        <p>&copy; 2023 File Upload Service</p>
+    </footer>
+</body>
+</html>

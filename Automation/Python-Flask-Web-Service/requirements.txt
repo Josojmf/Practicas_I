@@ -1,0 +1,4 @@
+Flask==2.2.3          # Framework web
+Werkzeug==2.2.3       # Utilizado para manejo de archivos seguros en Flask
+PyPDF2==3.0.0         # Para leer archivos PDF
+python-docx==0.8.11   # Para leer archivos Word (.docx)

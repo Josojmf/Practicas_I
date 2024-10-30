@@ -37,8 +37,13 @@ export default class loginPage {
 
   async WaitForUserToInputVerificationCode(){
     await this.page.waitForLoadState("networkidle");
-    const verifyByOutlookApp = await this.page.getByRole('button', { name: "Aprobar una solicitud en mi aplicación Outlook Mobile"}).click({timeout: 20000000, force: false});
-    await this.page.waitForTimeout(10000); 
+    const verifyByOutlookApp = await this.page.getByRole('button', { name: "Aprobar una solicitud en mi aplicación Outlook Mobile"});
+    try{
+    await verifyByOutlookApp.click();
+    } catch (error){
+      console.log("No se encontro el boton de aprobacion en la app de outlook");
+    }
+    await this.page.waitForTimeout(1000); 
   }
   async clickKeepMeSignedIn(){
     await this.page.locator("#idSIButton9").click();

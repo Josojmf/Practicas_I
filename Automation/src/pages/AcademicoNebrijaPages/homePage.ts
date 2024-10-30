@@ -51,12 +51,13 @@ export default class AcademicohomePage{
     }
 
     async clickReconocimientoTab(){
-        const reconocimientoTab = await this.page.getByText("Solicitud de Reconocimientos");
+        const reconocimientoTab = await this.page.locator('a[ocu-menuVerticalItem SOL_RECON af_commandNavigationItem"]')
+        await expect(reconocimientoTab).toBeVisible();
         await reconocimientoTab.click();
     }
 
     async checkAdmisionesDropdown(){
-        const dropdown = await this.page.locator('#pt1:men-portlets:sdi::body');
+        const dropdown = await this.page.locator('a[class="ocu-menuVerticalItem SOL_RECON af_commandNavigationItem"]')
         await expect(dropdown).toBeVisible();
     }
 }

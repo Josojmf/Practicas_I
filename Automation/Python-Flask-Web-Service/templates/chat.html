@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Chat Interface</title>
+</head>
+<body>
+    <header>
+        <h1>Chat Service</h1>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.list_files') }}">Files</a>
+            <a href="{{ url_for('main.weather') }}">Weather</a>
+            <a href="{{ url_for('main.chat') }}">Chat</a>
+
+        </nav>
+    </header>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            {% for msg in last_messages %}
+            <div class="message received">{{ msg['message'] }}</div>
+            {% endfor %}
+        </div>
+
+        <form class="chat-input" onsubmit="sendMessage(event)">
+            <input type="text" id="chat-message" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 File Upload Service & Weather Checker</p>
+    </footer>
+
+    <!-- Integración de Socket.IO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script type="text/javascript">
+        const socket = io();
+
+        // Función para enviar un mensaje
+        function sendMessage(event) {
+            event.preventDefault();
+            const messageInput = document.getElementById('chat-message');
+            const message = messageInput.value;
+
+            // Emitir mensaje al servidor
+            socket.emit('send_message', { message });
+
+            // Limpiar el campo de entrada
+            messageInput.value = '';
+        }
+
+        // Escuchar el evento de mensaje recibido y agregarlo al chat
+        socket.on('receive_message', function(data) {
+            const chatBox = document.getElementById('chat-box');
+            const newMessage = document.createElement('div');
+            newMessage.classList.add('message', 'received');
+            newMessage.textContent = data.message;
+            chatBox.appendChild(newMessage);
+
+            // Desplazar el chat hacia abajo para mostrar el mensaje nuevo
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+    </script>
+</body>
+</html>
