@@ -19,7 +19,9 @@
     <div class="chat-container">
         <div class="chat-box" id="chat-box">
             {% for msg in last_messages %}
-            <div class="message received">{{ msg['message'] }}</div>
+            <div class="message received">
+                <strong>{{ msg['user'] }}:</strong> {{ msg['message'] }}
+            </div>
             {% endfor %}
         </div>
 
@@ -36,8 +38,6 @@
     <!-- Socket.IO Integration -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
     <script type="text/javascript">
-        const isAdminCookie = document.cookie;
-        console.log(isAdminCookie);
         const socket = io();
 
         // Function to send a message
@@ -58,7 +58,7 @@
             const chatBox = document.getElementById('chat-box');
             const newMessage = document.createElement('div');
             newMessage.classList.add('message', 'received');
-            newMessage.textContent = data.message;
+            newMessage.innerHTML = `<strong>${data.user}:</strong> ${data.message}`;
             chatBox.appendChild(newMessage);
 
             // Scroll chat down to show the new message

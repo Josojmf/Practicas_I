@@ -4,9 +4,9 @@ const users={
     "validuser":configData.users.ValidUser,
     "notvaliduser":configData.users.NotValidUser,
     "validuserwrongpass":configData.users.ValidUserWrongPassUsername,
-    "adminUserPython":configData.users.AdminUserPython,
+    "adminuserpython":configData.users.adminuserpython,
     "validuserpython":configData.users.validuserpython,
-    "notValidUserPython":configData.users.NotValidUser
+    "notvaliduserpython":configData.users.NotValidUser
     
 }
 
@@ -14,10 +14,10 @@ const passwords={
     "validuser":configData.passwords.ValidPassword,
     "notvaliduser":configData.passwords.NotValidPassword,
     "validuserwrongpass":configData.passwords.ValidUserWrongPassPassword,
-    "validuserpython":configData.passwords.validPasswordPython,
-    "adminUserPython":configData.passwords.AdminUserPython,
-    "notValidUserPython":configData.passwords.NotValidUserPython,
-    "validUserWrongPassPython":configData.passwords.validUserWrongPassPython,
+    "validuserpython":configData.passwords.validpasswordpython,
+    "adminuserpython":configData.passwords.adminuserpython,
+    "notValidUserPython":configData.passwords.notvaliduserpython,
+    "validUserWrongPassPython":configData.passwords.validuserwrongpasspython,
 }
 
 const appUrls={

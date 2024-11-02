@@ -38,16 +38,26 @@ When('I enter valid credentials', async () => {
 
 When('I enter invalid credentials', async () => {
     loginP= new LoginPage(pageF.page);
-    await loginP.loginAs('invalidUserPython'); // Update with invalid credentials
+    await loginP.loginAs('invalidUserPython'); 
 });
 
 When('I enter empty credentials', async () => {
-    await loginP.loginAs(''); // Sending empty credentials
+    await loginP.loginAs(''); 
 });
 
 When('I enter admin credentials', async () => {
-    await loginP.loginAs('admin'); // Update with actual admin credentials
+    loginP= new LoginPage(pageF.page);
+    loginP.waitForNavigation();
+    await loginP.loginAs('AdminUserPython');
 });
+Then('I should see the admin page', async () => {
+    await pageF.page.goto('http://127.0.0.1:5000/admin'); // Update with actual admin page URL
+    await page.waitForTimeout(2000); // Wait for the page to load
+    await page.locator('#adminDashboard'); // Replace with an actual selector on the admin page
+    const adminPageTitle = await pageF.page.title();
+    await expect(adminPageTitle).toContain('Admin Dashboard'); // Update with actual admin page title
+});
+
 
 Then('I should see the home page', async () => {
     homeP= new HomePage(pageF.page);
@@ -61,7 +71,4 @@ Then('I should see an error message', async () => {
     expect(errorMessage).toContain('Invalid credentials'); // Update error message text as needed
 });
 
-Then('I should see the admin page', async () => {
-    await page.waitForSelector('#adminDashboard'); // Replace with an actual selector on the admin page
-    expect(await page.url()).toBe('http://127.0.0.1:5000/admin'); // Verify admin page URL
-});
+

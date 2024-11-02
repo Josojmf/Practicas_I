@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "login-feature;login-with-valid-credentials",
+        "id": "login-feature;login-with-admin-user",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "Login with valid credentials",
+        "line": 22,
+        "name": "Login with admin user",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 560588499
+              "duration": 537351499
             }
           },
           {
@@ -22,46 +22,46 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 375854799
+              "duration": 386561599
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 23,
             "name": "User is in the login page",
             "match": {
               "location": "src\\test\\steps\\pythonLoginSteps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 567417198
+              "duration": 565841899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
-            "name": "I enter valid credentials",
+            "line": 24,
+            "name": "I enter admin credentials",
             "match": {
-              "location": "src\\test\\steps\\pythonLoginSteps.ts:33"
+              "location": "src\\test\\steps\\pythonLoginSteps.ts:48"
             },
             "result": {
               "status": "passed",
-              "duration": 186053300
+              "duration": 187783800
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "I should see the home page",
+            "line": 25,
+            "name": "I should see the admin page",
             "match": {
-              "location": "src\\test\\steps\\pythonLoginSteps.ts:52"
+              "location": "src\\test\\steps\\pythonLoginSteps.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 2008062399
+              "duration": 2081369599
             }
           },
           {
@@ -69,7 +69,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 400799
+              "duration": 257799
             }
           },
           {
@@ -77,14 +77,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62070399
+              "duration": 66523400
             }
           }
         ],
         "tags": [
           {
-            "name": "@loginPythonWebService",
-            "line": 3
+            "name": "@loginPythonWebServiceAdminUser",
+            "line": 21
           }
         ],
         "type": "scenario"

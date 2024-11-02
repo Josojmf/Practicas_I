@@ -59,39 +59,46 @@ def admin_required(f):
     return decorated_function
 
 @socketio.on('send_message')
+@socketio.on('send_message')
 def handle_send_message(data):
     message = data.get('message')
+    username = session.get('username')
     if message:
         print(f"Received message: {message}")
-        save_message(message)
-        emit('receive_message', {"message": message}, broadcast=True)
+        save_message(username, message)
+        emit('receive_message', {"user": username, "message": message}, broadcast=True)
+
 
 
 def load_last_five_messages():
-    # Query the last five messages, sorted by timestamp in descending order
+    # Fetch last five messages from MongoDB
     messages = messages_collection.find().sort("timestamp", -1).limit(5)
     
-    # Convert the messages to a list of dictionaries
-    last_five_messages = [{"message": msg["message"], "timestamp": msg["timestamp"]} for msg in messages]
+    # Create a list of messages, using .get() to handle missing keys
+    last_five_messages = [{
+        "user": msg.get("username", "Unknown User"),  # Default to "Unknown User" if username is missing
+        "message": msg.get("message", ""),
+        "timestamp": msg.get("timestamp", "")
+    } for msg in messages]
     
-    # Return messages in chronological order (oldest to newest)
-    return last_five_messages[::-1]  # Reverse to get oldest first
+    # Return in chronological order (oldest to newest)
+    return last_five_messages[::-1]
 
 # Save a new message
 
 
-def save_message(message):
+def save_message(username,message):
     print("saving message")
     # Generate a timestamp for when the message is saved
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     # Insert the message into MongoDB with its timestamp
     messages_collection.insert_one({
+        "username": username,
         "message": message,
         "timestamp": timestamp
     })
-    
-    print(f"Message saved: {message} at {timestamp}")
+
 @main.route('/')
 def index():
     return render_template('index.html')
@@ -231,8 +238,9 @@ def login():
             session['logged_in'] = True
             session['username'] = username
             session['is_admin'] = user_is_admin
-            print(session['is_admin'])
-            
+            # set a cookie to store the username
+            response = redirect(url_for('main.index'))
+            response.set_cookie('username', username)            
             # Redirect based on admin status
             if user_is_admin:
                 return redirect(url_for('main.admin_dashboard'))

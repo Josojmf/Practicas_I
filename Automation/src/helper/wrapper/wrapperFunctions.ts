@@ -25,6 +25,7 @@ export default class wrapperFunctions {
   }
 
   static loginUsers(user: string) {
+    console.log("User: " + user);
     let role = user.toLowerCase();
     let credentials: any[];
     credentials = this.getUserPwd(role).slice();
@@ -32,7 +33,6 @@ export default class wrapperFunctions {
   }
 
   private static getUserPwd(role: string) {
-    console.log("Getting user credentials for: " + role);
     let userName = usersMap.get(role);
     let credentials: any[] = [];
     let userPwd = passwordsMap.get(role);
