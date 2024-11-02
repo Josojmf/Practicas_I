@@ -1,0 +1,100 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-feature;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 560588499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 375854799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is in the login page",
+            "match": {
+              "location": "src\\test\\steps\\pythonLoginSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 567417198
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter valid credentials",
+            "match": {
+              "location": "src\\test\\steps\\pythonLoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186053300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the home page",
+            "match": {
+              "location": "src\\test\\steps\\pythonLoginSteps.ts:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2008062399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 400799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 62070399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginPythonWebService",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Feature",
+    "tags": [],
+    "uri": "src\\test\\features\\Python_Web_Service_Features\\login.feature"
+  }
+]

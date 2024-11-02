@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="Title">File Upload Service</h1>
+
+    </header>
+    
+    <div class="container">
+        <h2 className="PageSubtittle" id="subtitle">Login</h2>
+        
+        <!-- Flash message display -->
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for category, message in messages %}
+                        <li class="flash-message {{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <form action="{{ url_for('main.login') }}" method="post" id="loginform">
+            <input type="text" name="username" placeholder="Username" required id="logininput">
+            <input type="password" name="password" placeholder="Password" required id="loginpwd">
+            <button type="submit" id="loginbutton">Login</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 File Upload Service</p>
+    </footer>
+</body>
+</html>

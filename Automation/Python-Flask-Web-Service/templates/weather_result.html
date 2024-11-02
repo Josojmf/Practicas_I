@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Weather Results</title>
+</head>
+<body>
+    <header>
+        <h1 class="Title">Weather Service</h1>
+    </header>
+    <div class="container">
+        <h2>Weather Results for {{ weather.city }}</h2>
+        <ul>
+            <li>Temperature: {{ weather.temperature }}°C</li>
+            <li>Description: {{ weather.description }}</li>
+            <li>Humidity: {{ weather.humidity }}%</li>
+            <li>Wind Speed: {{ weather.wind_speed }} km/h</li>
+        </ul>
+        <a href="{{ url_for('main.weather') }}">Check another city</a>
+    </div>
+    <footer>
+        <p>&copy; 2023 File Upload Service & Weather Checker</p>
+    </footer>
+</body>
+</html>

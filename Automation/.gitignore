@@ -1,0 +1,5 @@
+node_modules
+*.values.json
+*.values.local.json
+*.values.dev.json
+*.env

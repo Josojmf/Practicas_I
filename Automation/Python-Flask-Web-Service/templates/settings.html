@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Settings</h1>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.admin_dashboard') }}">Admin Dashboard</a>
+            
+            {% if not session.get('logged_in') %}
+                <a href="{{ url_for('main.login') }}">Login</a>
+            {% else %}
+                <a href="{{ url_for('main.logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Application Settings</h2>
+        
+        <form action="{{ url_for('main.settings') }}" method="post">
+            {% for setting in settings %}
+            <label for="{{ setting['name'] }}">{{ setting['name'] }}</label>
+            <input type="text" id="{{ setting['name'] }}" name="setting_value" value="{{ setting['value'] }}">
+            <input type="hidden" name="setting_name" value="{{ setting['name'] }}">
+            <button type="submit">Update</button>
+            {% endfor %}
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Admin Panel</p>
+    </footer>
+</body>
+</html>

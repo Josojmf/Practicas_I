@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="Title">File Upload Service</h1>
+        <nav>
+            <nav>
+
+            </nav>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Viewing: {{ filename }}</h2>
+        <pre>{{ content }}</pre>
+        <a href="{{ url_for('main.list_files') }}">Back to file list</a>
+    </div>
+    <footer>
+        <p>&copy; 2023 File Upload Service</p>
+    </footer>
+</body>
+</html>
+{% endblock %}
+

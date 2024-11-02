@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Check Weather</title>
+</head>
+<body>
+    <header>
+        <h1 class="Title">Weather Service</h1>
+    </header>
+    <div class="container">
+        <h2>Check the Weather</h2>
+        <form action="{{ url_for('main.weather_result') }}" method="post">
+            <label for="city">Enter City Name:</label>
+            <input type="text" name="city" id="city" placeholder="e.g., London" required>
+            <button type="submit">Check Weather</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 File Upload Service & Weather Checker</p>
+    </footer>
+</body>
+</html>
+{% endblock %}

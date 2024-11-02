@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Web App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="Title">File Upload Service</h1>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.list_files') }}">Files</a>
+            <a href="{{ url_for('main.weather') }}">Weather</a>
+            <a href="{{ url_for('main.chat') }}">Chat</a>
+
+            {% if session.get('isAdmin') %}
+                <a href="{{ url_for('main.admin_dashboard') }}">Admin Dashboard</a>
+            {% endif %}
+            
+            {% if not session.get('logged_in') %}
+                <a href="{{ url_for('main.login') }}">Login</a>
+                <a href="{{ url_for('main.register') }}">Register</a>
+
+            {% else %}
+                <a href="{{ url_for('main.logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 José María Fernández</p>
+    </footer>
+</body>
+</html>
