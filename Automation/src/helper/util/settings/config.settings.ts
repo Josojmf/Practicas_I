@@ -1,23 +1,22 @@
 import * as configData from './config.values.json';
 
 const users={
-    "validuser":configData.users.ValidUser,
-    "notvaliduser":configData.users.NotValidUser,
-    "validuserwrongpass":configData.users.ValidUserWrongPassUsername,
+    "validuser":configData.users.validuser,
+    "notvaliduser":configData.users.notvaliduser,
+    "validuserwrongpass":configData.users.validuserwrongpassusername,
     "adminuserpython":configData.users.adminuserpython,
     "validuserpython":configData.users.validuserpython,
-    "notvaliduserpython":configData.users.NotValidUser
-    
+    "notvaliduserpython":configData.users.notvaliduser   
 }
 
 const passwords={
-    "validuser":configData.passwords.ValidPassword,
-    "notvaliduser":configData.passwords.NotValidPassword,
-    "validuserwrongpass":configData.passwords.ValidUserWrongPassPassword,
+    "validuser":configData.passwords.validuser,
+    "notvaliduser":configData.passwords.notvaliduser,
+    "validuserwrongpass":configData.passwords.Validuserwrongpassusername,
     "validuserpython":configData.passwords.validpasswordpython,
     "adminuserpython":configData.passwords.adminuserpython,
-    "notValidUserPython":configData.passwords.notvaliduserpython,
-    "validUserWrongPassPython":configData.passwords.validuserwrongpasspython,
+    "notvaliduserpython":configData.passwords.notvaliduserpython,
+    "validuserwrongpasspython":configData.passwords.validuserwrongpasspython,
 }
 
 const appUrls={

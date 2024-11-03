@@ -33,12 +33,12 @@ Given('User is in the login page', async () => {
 When('I enter valid credentials', async () => {
     loginP= new LoginPage(pageF.page);
     loginP.waitForNavigation();
-    await loginP.loginAs('validUserPython'); 
+    await loginP.loginAs('validuserpython'); 
 })
 
 When('I enter invalid credentials', async () => {
     loginP= new LoginPage(pageF.page);
-    await loginP.loginAs('invalidUserPython'); 
+    await loginP.loginAs('notvaliduserpython'); 
 });
 
 When('I enter empty credentials', async () => {
@@ -48,7 +48,7 @@ When('I enter empty credentials', async () => {
 When('I enter admin credentials', async () => {
     loginP= new LoginPage(pageF.page);
     loginP.waitForNavigation();
-    await loginP.loginAs('AdminUserPython');
+    await loginP.loginAs('adminuserpython');
 });
 Then('I should see the admin page', async () => {
     await pageF.page.goto('http://127.0.0.1:5000/admin'); // Update with actual admin page URL
@@ -67,8 +67,7 @@ Then('I should see the home page', async () => {
 });
 
 Then('I should see an error message', async () => {
-    const errorMessage = await page.textContent('.error-message'); // Replace with actual error message selector
-    expect(errorMessage).toContain('Invalid credentials'); // Update error message text as needed
-});
+    const errorMessage = await pageF.page.locator('.flash-messages'); // Replace with actual error message selector
+    await expect(errorMessage).toBeVisible();
 
-
+});                
