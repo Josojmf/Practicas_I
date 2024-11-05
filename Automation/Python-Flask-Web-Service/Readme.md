@@ -1,6 +1,3 @@
-Here’s an enhanced and organized README file for your project, including the additional admin options. I've structured it with clear headings and sections for better readability.
-
----
 
 # Web Service for Automation Testing 
 ### By José María Fernández (and ChatGPT)
