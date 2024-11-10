@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Available Files{% endblock %}
+
+{% block content %}
+{% if settings.get('maintenance_mode') %}
+    <div class="maintenance-message">
+        <h1>Page is under maintenance</h1>
+        <p>Sorry for the inconvenience.</p>
+    </div>
+{% else %}
+    <header>
+        <h1>Available Files</h1>
+    </header>
+
+    <div class="container">
+        <ul>
+            {% for file in files %}
+                <li><a href="{{ url_for('main.download_file', filename=file) }}">{{ file }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% endblock %}
