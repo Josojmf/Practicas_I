@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Interface{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2 id="AdminTtile">Welcome, Admin!</h2>
+        <p>This is your admin dashboard where you can manage users, view system logs, and configure settings.</p>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for category, message in messages %}
+                        <li class="flash-message {{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Admin Actions Section -->
+        <section>
+            <h3>Admin Actions</h3>
+            <ul id="#adminOptionsContainer">
+                <li class="adminoption"><a  class="adminLink" id="#adminoptionTextLinkManageUser" href="{{ url_for('main.manage_users') }}">Manage Users</a></li>
+                <li class="adminoption"><a  class="adminLink" id="#adminoptionTextLinkLogs" href="{{ url_for('main.view_logs') }}">View System Logs</a></li>
+                <li class="adminoption"><a  class="adminLink" id="#adminoptionTextLinkSettings" href="{{ url_for('main.settings') }}">Site Settings</a></li>
+            </ul>
+        </section>
+
+        <!-- Dashboard Content Section -->
+        <section>
+            <h3>Dashboard Overview</h3>
+            <p>Here you can include charts, tables, or statistics relevant to the admin.</p>
+            <!-- Example content: Displaying summary data -->
+            <div class="summary">
+                <p><strong>Total Users:</strong> {{ total_users }}</p>
+                <p><strong>Files Uploaded:</strong> {{ total_files }}</p>
+                <p><strong>System Logs:</strong> {{ log_entries }} entries</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 File Upload Service | Admin Dashboard</p>
+    </footer>
+</body>
+</html>
+{% endblock %}

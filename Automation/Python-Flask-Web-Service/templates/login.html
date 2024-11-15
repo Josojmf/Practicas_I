@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <form action="{{ url_for('main.login') }}" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit" id="loginButton" disabled>Login</button>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for category, message in messages %}
+                    <li class="flash-message {{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <script>
+        // Get references to the input fields and button
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('loginButton');
+
+        // Add event listeners for input changes
+        usernameInput.addEventListener('input', toggleButtonState);
+        passwordInput.addEventListener('input', toggleButtonState);
+
+        function toggleButtonState() {
+            // Enable the button only if both fields are not empty
+            if (usernameInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
+                loginButton.disabled = false; // Enable button
+            } else {
+                loginButton.disabled = true; // Keep button disabled
+            }
+        }
+    </script>
+{% endblock %}

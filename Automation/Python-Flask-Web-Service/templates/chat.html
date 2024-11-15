@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Interface{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Chat Interface</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="Title">Chat Service</h1>
+    </header>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            {% for msg in last_messages %}
+            <div class="message received">
+                <strong>{{ msg['user'] }}:</strong> {{ msg['message'] }}
+            </div>
+            {% endfor %}
+        </div>
+
+        <form class="chat-input" onsubmit="sendMessage(event)">
+            <input type="text" id="chat-message" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 File Upload Service & Weather Checker</p>
+    </footer>
+
+    <!-- Socket.IO Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script type="text/javascript">
+        const socket = io();
+
+        // Function to send a message
+        function sendMessage(event) {
+            event.preventDefault();
+            const messageInput = document.getElementById('chat-message');
+            const message = messageInput.value;
+
+            // Emit message to server
+            socket.emit('send_message', { message });
+
+            // Clear input field
+            messageInput.value = '';
+        }
+
+        // Listen for received messages and add them to the chat
+        socket.on('receive_message', function (data) {
+            const chatBox = document.getElementById('chat-box');
+            const newMessage = document.createElement('div');
+            newMessage.classList.add('message', 'received');
+            newMessage.innerHTML = `<strong>${data.user}:</strong> ${data.message}`;
+            chatBox.appendChild(newMessage);
+
+            // Scroll chat down to show the new message
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+    </script>
+</body>
+
+</html>
+{% endblock %}
