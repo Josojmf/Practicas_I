@@ -23,6 +23,18 @@ To set up the environment, you need to install the required packages.
 ```bash
 pip install -r requirements.txt
 ```
+## Configuration
+
+Create a .env file on the root of the Python webservice project
+
+DB_USERNAME=username
+DB_PASSWORD=fassword
+DB_CLUSTER=yourcluster
+DB_NAME=yourdbname
+DB_USERS_COLLECTION=Users
+DB_LOGS_COLLECTION=Logs
+DB_SETTINGS_COLLECTION=Settings
+DB_MESSAGES_COLLECTION=Messages
 
 ## How to Run
 

@@ -85,4 +85,26 @@ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrijaLo
 ```
  npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@validationOfAdmisionesPage" --BWSR="chrome"
 ``` 
-#### 
+### Python App
+
+#### All features 
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceInvalidCredentials or @loginPythonWebServiceNormalUser or @loginPythonWebServiceEmptyCredentials or @loginPythonWebServiceAdminUser or @allTagsLoginPythonWebService" --BWSR="chrome"
+```
+#### Login With invalid credentials 
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceInvalidCredentials" --BWSR="chrome"
+
+#### Login With normal credentials
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceNormalUser" --BWSR="chrome"
+```
+#### Login With Empty credentials
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceEmptyCredentials" --BWSR="chrome"
+
+```
+#### Login With Admin credentials
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceAdminUser" --BWSR="chrome"
+
+```
