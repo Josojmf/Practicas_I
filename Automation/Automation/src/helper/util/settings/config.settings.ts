@@ -6,6 +6,7 @@ const users={
     "validuserwrongpass":configData.users.validuserwrongpassusername,
     "adminuserpython":configData.users.adminuserpython,
     "validuserpython":configData.users.validuserpython,
+    "validuserpython2":configData.users.validuserpython2,
     "notvaliduserpython":configData.users.notvaliduser ,
     "normalUserPython":configData.users.validuserpython, 
 }
@@ -15,6 +16,7 @@ const passwords={
     "notvaliduser":configData.passwords.notvaliduser,
     "validuserwrongpass":configData.passwords.Validuserwrongpassusername,
     "validuserpython":configData.passwords.validpasswordpython,
+    "validuserpython2":configData.passwords.validpasswordpython2,
     "adminuserpython":configData.passwords.adminuserpython,
     "notvaliduserpython":configData.passwords.notvaliduserpython,
     "validuserwrongpasspython":configData.passwords.validuserwrongpasspython,
