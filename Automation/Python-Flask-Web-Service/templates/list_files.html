@@ -9,14 +9,28 @@
         <p>Sorry for the inconvenience.</p>
     </div>
 {% else %}
-    <header>
+    <header class="page-header">
         <h1>Available Files</h1>
     </header>
 
     <div class="container">
-        <ul>
+        <!-- File Upload Form -->
+        <form action="{{ url_for('main.upload_file') }}" method="post" enctype="multipart/form-data" class="file-upload-form">
+            <label for="file" class="file-label">Upload a File</label>
+            <div class="file-upload">
+                <input type="file" id="file" name="file" accept=".pdf" class="file-input" required>
+                <button type="submit" class="btn upload-btn">Upload</button>
+            </div>
+        </form>
+
+        <!-- List of Files -->
+        <ul class="file-list">
             {% for file in files %}
-                <li><a href="{{ url_for('main.download_file', filename=file) }}">{{ file }}</a></li>
+                <li class="file-item">
+                    <a href="{{ url_for('main.download_file', filename=file) }}" class="file-link">
+                        {{ file }}
+                    </a>
+                </li>
             {% endfor %}
         </ul>
     </div>

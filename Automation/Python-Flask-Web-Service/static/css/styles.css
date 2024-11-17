@@ -691,3 +691,143 @@ form button[type="submit"]:hover {
         padding: 0.75rem 0;
     }
 }
+
+/* Header Styling */
+.page-header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* File Upload Form */
+.file-upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.file-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.file-input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.file-input:hover,
+.file-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.upload-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #0056b3;
+}
+
+/* File List */
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.file-item {
+  background-color: #f9f9f9;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.file-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.file-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.file-link:hover {
+  color: #0056b3;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .file-upload-form {
+      padding: 1rem;
+  }
+
+  .file-input {
+      font-size: 0.9rem;
+  }
+
+  .upload-btn {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+  }
+
+  .file-item {
+      padding: 0.7rem 0.9rem;
+  }
+}

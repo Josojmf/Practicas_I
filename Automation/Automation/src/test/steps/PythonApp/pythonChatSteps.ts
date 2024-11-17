@@ -12,12 +12,14 @@ import LoginPage from "../../../pages/PythonWebServicePages/loginPage";
 import HomePage from "../../../pages/PythonWebServicePages/homePage";
 import { pageF } from "../../../hooks/pageF";
 import ChatPage from "../../../pages/PythonWebServicePages/ChatPage";
+import FilesPage from "../../../pages/PythonWebServicePages/FilesPage";
 
 let browser: Browser;
 let page: Page;
 let loginP: LoginPage;
 let chatpP: ChatPage;
 let homeP: HomePage;
+let FilesP: FilesPage;
 
 // Before and After hooks to manage browser lifecycle
 
@@ -39,6 +41,10 @@ Given("User is in the {string} page", async (page: string) => {
     case "login":
       loginP = new LoginPage(pageF.page);
       loginP.waitForNavigation();
+      break;
+    case "files":
+      FilesP = new FilesPage(pageF.page);
+      FilesP.waitForNavigation();
       break;
   }
 });
