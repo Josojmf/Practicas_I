@@ -13,7 +13,8 @@ export default class FilesPage {
   private elements = {
 
     logoutButton: "//html/body/div[1]/div/ul/li[2]/a",
-    uploadFilesInput:"//html/body/div[2]/div/form/div/input"
+    uploadFilesInput:"//html/body/div[2]/div/form/div/input",
+    uploadFileButton: "text=Upload File",
   };
 
   async waitForNavigation() {
@@ -23,11 +24,15 @@ export default class FilesPage {
     await this.page.locator(this.elements.logoutButton).click();
   }
 
+  async checkFilesPage(url: string) {
+    await expect(this.page.url()).toContain(url);
+  }
+
   async uploadFile(filePath: string) {
     await this.page.setInputFiles(this.elements.uploadFilesInput, filePath);
   }
 async clickUploadFileButton() {
-    await this.page.click('text=Upload File');
+    await this.page.locator(this.elements.uploadFileButton).click();
   }
 async isFileUploaded(fileName: string) {
     const fileUploaded = await this.page.locator(`text=${fileName}`).isVisible();

@@ -5,6 +5,7 @@ Feature: Files page validation
         And User clicks on "loginButton"
         Then User logs in as "validuserpython"
         Then I should see the home page
+    #Working
    @testuploadFile
     Scenario: User should be able to upload file
         When User is in the "files" page

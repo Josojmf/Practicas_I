@@ -3,6 +3,9 @@ import wrapperFunctions from "../../helper/wrapper/wrapperFunctions";
 import { log } from "console";
 
 export default class ChatPage {
+  async checkChatPage(link: string) {
+    await expect(this.page.url()).toContain(link);
+  }
   private base: wrapperFunctions;
 
   constructor(private page: Page) {

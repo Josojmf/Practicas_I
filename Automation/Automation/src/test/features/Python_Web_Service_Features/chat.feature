@@ -5,14 +5,15 @@ Feature: Chat page validation
         And User clicks on "loginButton"
         Then User logs in as "validuserpython"
         Then I should see the home page
-
+#Working
     @testchatsendmessage
     Scenario: User should be able to send message
         When User is in the "chat" page
         When I enter "Hello" in the message box
         And I click on send button
         Then I should see the message with text "hello" in the chat window
-        @testchatsendmessageAndOtherUserView
+#Working
+    @testchatsendmessageAndOtherUserView
     Scenario: User should be able to send message
         When User is in the "chat" page
         When I enter "Hello" in the message box

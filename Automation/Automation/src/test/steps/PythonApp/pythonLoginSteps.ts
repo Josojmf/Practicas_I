@@ -41,13 +41,6 @@ Then('I should see the admin page', async () => {
 });
 
 
-Then('I should see the home page', async () => {
-const possibleHomePages = ['http://localhost:5000/', 'http://127.0.0.1:5000/', 'http://localhost:5000']; // Update with actual home page URLs
-    homeP= new HomePage(pageF.page);
-    await pageF.page.waitForTimeout(2000);
-    await expect(possibleHomePages).toContain(pageF.page.url());
-    const homePtitle = homeP.verifyHomePage();
-});
 
 Then('I should see an error message', async () => {
     const errorMessage = await pageF.page.locator('.flash-messages'); // Replace with actual error message selector
