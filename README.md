@@ -98,6 +98,34 @@ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrijaLo
 
 ### Python App
 
+#### Main page validation
+
+```
+ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS=" @testhomePageValiation" --BWSR="chrome"
+
+```
+#### Main page redirections validation
+
+```
+ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@testhomePageLinksCorrectReddirection" --BWSR="chrome"
+
+```
+
+#### Files page validation
+
+##### Normal file workflow
+```
+ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS=" @testuploadFile" --BWSR="chrome"
+ 
+```
+##### Big file upload workflow
+```
+ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@testUploadBigFile" --BWSR="chrome"
+```
+
+
+
+
 #### All features
 
 ```
@@ -106,7 +134,9 @@ npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServ
 
 #### Login With invalid credentials
 
+```
 npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceInvalidCredentials" --BWSR="chrome"
+```
 
 #### Login With normal credentials
 
@@ -140,4 +170,22 @@ npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@testchatsendmessag
 
 ```
  npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@testchatsendmessageAndOtherUserView" --BWSR="chrome"
+```
+#### Register with valid credentials
+
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@registerValidCredentials" --BWSR="chrome"
+```
+#### Register with existing credentials
+
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@registerExistingCredentials" --BWSR="chrome"
+```
+#### Check weather of existing city
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@testSearchForcity" --BWSR="chrome"
+```
+#### Check weather of non existing city
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@testSearchForcityNotExistent" --BWSR="chrome"
 ```

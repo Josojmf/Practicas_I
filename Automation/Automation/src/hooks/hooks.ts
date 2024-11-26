@@ -114,6 +114,10 @@ AfterAll(async function () {
 
   server.listen(PORT, () => {
     console.log(`Cucumber report server running at http://localhost:${PORT}`);
+    //launch chromium browser to open the report
+    const { exec } = require('child_process');
+    exec(`start chrome http://localhost:${PORT}`);
+    
   });
 });
 

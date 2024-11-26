@@ -14,6 +14,19 @@
     </header>
 
     <div class="container">
+        <!-- Display Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
         <!-- File Upload Form -->
         <form action="{{ url_for('main.upload_file') }}" method="post" enctype="multipart/form-data" class="file-upload-form">
             <label for="file" class="file-label">Upload a File</label>

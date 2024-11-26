@@ -12,3 +12,9 @@ Feature: Files page validation
         Then User uploads file "sample"
         When User clicks on "uploadFileButton" on files page
         Then User should see the file "sample" uploaded successfully
+    @testUploadBigFile
+    Scenario: User should be able to upload big file
+        When User is in the "files" page
+        Then User uploads file "bigfile"
+        When User clicks on "uploadFileButton" on files page
+        Then User should see error message File size is too big

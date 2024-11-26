@@ -23,6 +23,16 @@ Feature: Login Feature
         Given User is in the login page
         When I enter "adminuserpython" credentials
         Then I should see the admin page
+    @accessPagesNotLoggedIn
+    Scenario: Access restricted pages without loggin in
+        Given User is in the login page
+        When I dont enter any credentials
+        Then Login Button should be disabled
+        And I should not be able to access restricted pages
+    Scenario: Login with valid credentials
+        Given User is in the login page
+        When I enter "validuserpython" credentials
+        Then I should see the home page
     @allTagsLoginPythonWebService
     Scenario: Launch all tags
         Given User is in the login page
