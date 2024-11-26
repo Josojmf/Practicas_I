@@ -7,6 +7,7 @@ socketio = SocketIO()  # initialize socketio here
 def create_app():
     app = Flask(__name__, template_folder='../templates', static_folder='../static')
     app.config['UPLOAD_FOLDER'] = 'uploads'
+    app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB max file size
     app.secret_key = 'supersecretkey'
 
     # Register blueprint after defining app

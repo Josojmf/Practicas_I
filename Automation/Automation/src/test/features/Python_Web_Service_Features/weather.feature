@@ -11,3 +11,9 @@ Feature: Files page validation
         When User is in the "weather" page
         Then User searches for city "New York"
         Then User should see the weather for "New York" displayed
+    #Working
+    @testSearchForcityNotExistent
+    Scenario: User should not be able to visualize non-existent city weather
+        When User is in the "weather" page
+        Then User searches for city "fueawubbbdAHUBUB$ª"
+        Then I should see an error message

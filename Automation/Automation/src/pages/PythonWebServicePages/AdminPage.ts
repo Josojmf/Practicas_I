@@ -20,6 +20,23 @@ export class AdminPage {
     await ManageUsersLink.click();
   }
 
+  async getLinkText(link: string) {
+    switch (link) {
+      case "Manage Users":
+        const manageUsersLink = await this.page.locator(
+          'a[href="/manage_users"]'
+        );
+        return await manageUsersLink.innerText();
+      case "View System Logs":
+        const viewSystemLogsLink = await this.page.locator(
+          'a[href="/view_logs"]'
+        );
+      case "Site Settings":
+        const siteSettingsLink = await this.page.locator('a[href="/settings"]');
+        return await siteSettingsLink.innerText();
+    }
+  }
+
   async clickDeleteButtonForThirdUser() {
     const DeleteButton = await this.page.locator('button[id=deleteButton"]');
     await DeleteButton.nth(2).click();
@@ -37,5 +54,26 @@ export class AdminPage {
   async checkUserDeleted(deletedUser: string) {
     const locatorDeletedUser = this.page.getByText(deletedUser);
     await expect(locatorDeletedUser).toHaveCount(0);
+  }
+
+  async clickLink(link: string) {
+    switch (link) {
+      case "Manage Users":
+        const manageUsersLink = await this.page.locator(
+          'a[href="/manage_users"]'
+        );
+        await manageUsersLink.click();
+        break;
+      case "View System Logs":
+        const viewSystemLogsLink = await this.page.locator(
+          'a[href="/view_logs"]'
+        );
+        await viewSystemLogsLink.click();
+        break;
+      case "Site Settings":
+        const siteSettingsLink = await this.page.locator('a[href="/settings"]');
+        await siteSettingsLink.click();
+        break;
+    }
   }
 }

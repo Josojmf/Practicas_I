@@ -62,4 +62,11 @@ export default class LoginPage {
       await this.clickLoginButton();
     }
   }
+
+  async checkRegisterConfirmation() {
+    const confirmationMessage = await this.page.locator(
+      "li[class='flash-message info']"
+    );
+    await expect(confirmationMessage).toBeVisible();
+  }
 }
