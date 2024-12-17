@@ -76,7 +76,7 @@ Deberías ver los contenedores practicas-1-dev y Mongo_DB_DEV_ENV corriendo en l
 
 
 Configurar archivos necesarios
-En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env.
+En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env. si no se ha construido con docker
 
 ```
 mv .env.sample .env
