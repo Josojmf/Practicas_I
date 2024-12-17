@@ -45,10 +45,6 @@ cd Practicas_I
 ``` 
 cd Automation
 ```
-(Yes again..)
-``` 
-cd Automation
-```
 
 ``` 
 cd Python-Flask-Web-Service-INT
