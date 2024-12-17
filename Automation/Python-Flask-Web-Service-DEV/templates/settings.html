@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Interface{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Settings</h1>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.admin_dashboard') }}">Admin Dashboard</a>
+            {% if not session.get('logged_in') %}
+                <a href="{{ url_for('main.login') }}">Login</a>
+            {% else %}
+                <a href="{{ url_for('main.logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Application Settings</h2>
+
+        <form action="{{ url_for('main.settings') }}" method="post">
+            <!-- Site Title Setting -->
+            <label for="setting_site_title">Site Title</label>
+            <input type="text" id="setting_site_title" name="setting_site_title" 
+                   value="{{ settings.get('site_title', '') }}">
+            <button type="submit">Update Title</button>
+            
+            <!-- Enable Registration Setting -->
+            <label for="setting_enable_registration">Enable Registration</label>
+            <input type="checkbox" id="setting_enable_registration" name="setting_enable_registration" 
+                   {% if settings.get('enable_registration') %}checked{% endif %}>
+            <button type="submit">Update Registration</button>
+
+            <!-- Maintenance Mode Setting -->
+            <label for="setting_maintenance_mode">Maintenance Mode</label>
+            <input type="checkbox" id="setting_maintenance_mode" name="setting_maintenance_mode" 
+                   {% if settings.get('maintenance_mode') %}checked{% endif %}>
+            <button type="submit">Update Maintenance</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Admin Panel</p>
+    </footer>
+</body>
+</html>
+{% endblock %}

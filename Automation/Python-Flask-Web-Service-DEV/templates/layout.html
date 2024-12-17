@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ settings.get('site_title', 'My Web App') }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body onclick="closePanelOnClickOutside(event)">
+    {% if maintenance_active %}
+    <div id="maintenance-message" class="maintenance-message">
+        <h1>Page is under maintenance</h1>
+        <p>Sorry for the inconvenience.</p>
+    </div>
+    {% else %}
+    
+    <!-- Expand Button -->
+    <button class="expand-button" onclick="toggleSidePanel()">☰ Menu</button>
+    
+    <!-- Close Button -->
+    <button class="close-button" onclick="toggleSidePanel()" style="display: none;">✖ Close</button>
+    
+    <!-- Sidebar -->
+    <div class="side-panel">
+        <div class="side-panel-content">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+
+                {% if not session.get('logged_in') %}
+                    <!-- Show Login and Register if not logged in -->
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                {% else %}
+                    <!-- Show Logout if logged in -->
+                    <li><a href="/logout">Logout</a></li>
+                {% endif %}
+                
+                <li><a href="/weather">Weather</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/ssti">SSTI</a></li>
+
+                <!-- Admin-only Links -->
+                {% if session.get('is_admin') %}
+                    <li><a href="/admin">Admin Dashboard</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    {% endif %}
+    
+    <footer>
+        <p>&copy; 2024 Practicas I Jmf</p>
+    </footer>
+    
+    <script>
+        function toggleSidePanel() {
+            const sidePanel = document.querySelector('.side-panel');
+            const closeButton = document.querySelector('.close-button');
+            const expandButton = document.querySelector('.expand-button');
+            
+            // Toggle the 'open' class on the sidebar
+            sidePanel.classList.toggle('open');
+            
+            // Show or hide buttons based on panel state
+            if (sidePanel.classList.contains('open')) {
+                expandButton.style.display = 'none'; // Hide expand button
+                closeButton.style.display = 'block'; // Show close button
+            } else {
+                expandButton.style.display = 'block'; // Show expand button
+                closeButton.style.display = 'none';   // Hide close button
+            }
+        }
+    
+        function closePanelOnClickOutside(event) {
+            const sidePanel = document.querySelector('.side-panel');
+            const expandButton = document.querySelector('.expand-button');
+            const closeButton = document.querySelector('.close-button');
+            
+            // Close the panel if click is outside the sidebar and expand button
+            if (!sidePanel.contains(event.target) && !expandButton.contains(event.target)) {
+                sidePanel.classList.remove('open');
+                expandButton.style.display = 'block'; // Show expand button
+                closeButton.style.display = 'none';   // Hide close button
+            }
+        }
+    </script>
+</body>
+</html>
