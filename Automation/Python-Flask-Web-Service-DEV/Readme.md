@@ -123,8 +123,7 @@ docker run -p 5000:5000 --env-file .env python-flask-web-service
  ```
  OR. 
 ```
-docker-compose up --build
-docker-compose -f docker-compose.yml up --build
+docker-compose up -d
 ```
 
  #### Then Image should be available to run from docker desktop if system is halted
