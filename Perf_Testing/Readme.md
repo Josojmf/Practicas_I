@@ -1,4 +1,8 @@
 # Performance test run
+# Install
+```
+npm install artillery
+```
 # Run
 ## Local Report
 ```
