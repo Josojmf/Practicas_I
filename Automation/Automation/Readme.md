@@ -75,7 +75,7 @@ npx playwright install
         "EmptyUser":""
     }
 }
-}
+
 ```
 #### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
 
