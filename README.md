@@ -76,6 +76,12 @@ DB_MESSAGES_COLLECTION=Messages
 ```
 Instala las dependencias:
 ```
+cd ...
+```
+```
+cd Automation
+```
+```
 npm install
 ```
 ```
