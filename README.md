@@ -1,6 +1,6 @@
 <h1> Practicas I José María Fernández </h1>
 
-# Repositorio Trabajo fin asignatura Practicas I José María Fernández Gómez
+# Repositorio Trabajo final asignatura Practicas I José María Fernández Gómez
 
 ## Tutor: Adolfo Abalo Cascallar
 
@@ -41,6 +41,19 @@ git clone https://github.com/Josojmf/Practicas_I.git
 ```
 cd Practicas_I
 ```
+
+``` 
+cd Automation
+```
+
+``` 
+cd Python-Flask-Web-Service-INT
+```
+Or
+``` 
+cd Python-Flask-Web-Service-DEV
+```
+
 Configurar archivos necesarios
 En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env.
 
@@ -63,15 +76,47 @@ DB_MESSAGES_COLLECTION=Messages
 ```
 Instala las dependencias:
 ```
-cd Automation
-```
-```
 npm install
 ```
 ```
 npx playwright install
 ```
-Construcción y ejecución del contenedor Docker
+```
+{
+    "urls":{
+        "BlackBoard":"https://campusvirtual.nebrija.es/",
+        "AcademicoNebrija":"https://academico.nebrija.es/ServiciosApp",
+        "PythonWebService":"http://localhost:5005"
+    },
+    "users":{
+        "validuser":"jfernandezg15@alumnos.nebrija.es",
+        "notvaliduser":"notValidUser@notvalid.nope",
+        "validuserwrongpassusername":"jfernandezg15@alumnos.nebrija.es",
+        "adminuserpython":"admin",
+        "validuserpython":"testuser",
+        "validuserpython2":"testuser2",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"testuser",
+        "adminPython":"admin",
+        "emptyuser":""
+    },
+    "passwords":{
+        "validuser":"",
+        "notvaliduser":"notValidPassword",
+        "Validuserwrongpassusername":"notValidPassword",
+        "adminuserpython":"admin",
+        "validpasswordpython":"test",
+        "validpasswordpython2":"test",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"notValidPassword",
+        "EmptyUser":""
+    }
+}
+
+```
+#### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
+
+#### Construcción y ejecución del contenedor Docker
 Construir la imagen Docker
 Desde la carpeta raíz del proyecto:
 
