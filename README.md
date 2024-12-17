@@ -92,8 +92,8 @@ DB_SETTINGS_COLLECTION=Settings
 DB_MESSAGES_COLLECTION=Messages
 ```
 <h1>Automation</h1>
-Proceso explicado para salir inmediatamente de la carpeta donde se ha construido con docker el aplicativo, por eso esta primera instrucción cd..
-Directorio de atumatización en Automation/Automation
+Proceso explicado para salir inmediatamente de la carpeta donde se ha construido con docker el aplicativo, por eso esta primera instrucción cd..<br></br>
+Directorio de atumatización en Automation/Automation<br></br>
 ```
 cd ..
 ```
