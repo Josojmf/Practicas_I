@@ -42,7 +42,7 @@ git clone https://github.com/Josojmf/Practicas_I.git
 cd Practicas_I
 ```
 
-```
+``` 
 cd Automation
 ```
 
