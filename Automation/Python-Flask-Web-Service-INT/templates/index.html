@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Interface{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Chat Interface</title>
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Welcome to the File Upload Service INT ENV</h2>
+        <p>This is the main landing page. From here, you can navigate to various sections of the service.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>File Management</h3>
+                <p>Upload, view, and manage your files effortlessly.</p>
+                <a href="/files" class="button">View Files</a>
+            </div>
+            <div class="card">
+                <h3>Weather Checker</h3>
+                <p>Get current weather updates for any city.</p>
+                <a href="/weather" class="button">Check Weather</a>
+            </div>
+            <div class="card">
+                <h3>Live Chat</h3>
+                <p>Join the live chat to stay connected with other users.</p>
+                <a href="/chat" class="button">Go to Chat</a>
+            </div>
+            <div class="card admin-card">
+                <h3>Admin Dashboard</h3>
+                <p>Manage users, view logs, and adjust settings.</p>
+                <a href="/admin" class="button">Admin Panel</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 My Web App</p>
+    </footer>
+
+</body>
+</html>
+{% endblock %}

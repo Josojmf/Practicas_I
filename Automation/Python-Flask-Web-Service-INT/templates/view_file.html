@@ -1,0 +1,47 @@
+{% if settings.get('maintenance_mode') %}
+{% extends "layout.html" %}
+
+{% block title %}Chat Interface{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Mode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="maintenance-message">
+        <h1>Page is under maintenance</h1>
+        <p>Sorry for the inconvenience.</p>
+    </div>
+</body>
+</html>
+{% else %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>View File</title>
+</head>
+
+<body>
+    <header>
+        <h1>View File: {{ filename }}</h1>
+    </header>
+
+    <div class="container">
+        <p>File contents:</p>
+        <pre>{{ file_content }}</pre>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 File Upload Service</p>
+    </footer>
+</body>
+</html>
+{% endif %}
+{% endblock %}

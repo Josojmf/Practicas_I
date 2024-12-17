@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSTI Vulnerability Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SSTI Vulnerability Demo</h1>
+    </header>
+
+    <main class="ssti-container">
+        <h1>Test SSTI Vulnerability</h1>
+        <h2>Input { ''.__class__.__mro__[1].__subclasses__()[453](['cmd', '/c', 'whoami'], stdout=-1).communicate()[0].decode('cp1252') } All between another pair of brackets</h2>
+        <form method="POST" action="/ssti">
+            <label for="input">Enter some text </label>
+            <input type="text" id="input" name="input" placeholder="Enter your input here..." required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if result %}
+        <div class="ssti-result">
+            <h2>Result:</h2>
+            <p>{{ result }}</p> <!-- Vulnerable to SSTI -->
+        </div>
+        {% endif %}
+    </main>
+
+</body>
+</html>

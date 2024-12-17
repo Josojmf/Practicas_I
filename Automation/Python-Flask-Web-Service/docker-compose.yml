@@ -1,10 +1,15 @@
 version: "3.8"
+
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: practicas-i-python-app:1.0  # Custom image name
+    container_name: practicas-I-Python-App  # Explicit container name
     ports:
       - "5000:5000"
     volumes:
       - .:/app
     environment:
-      FLASK_ENV: development  # or production
+      FLASK_ENV: development
