@@ -29,6 +29,9 @@ cd Automation
 ```
 
 </br>
+```
+cd Automation
+```
 </br>
 
 ```
@@ -141,11 +144,6 @@ npm run test --ENV="local" --APPS="AcademicoNebrija" --TAGS="@academicoNebrijaLo
 
 
 
-#### All features
-
-```
-npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceInvalidCredentials or @loginPythonWebServiceNormalUser or @loginPythonWebServiceEmptyCredentials or @loginPythonWebServiceAdminUser or @allTagsLoginPythonWebService" --BWSR="chrome"
-```
 
 #### Login With invalid credentials
 
@@ -203,4 +201,9 @@ npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@testSearchForcity"
 #### Check weather of non existing city
 ```
 npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@testSearchForcityNotExistent" --BWSR="chrome"
+```
+#### All features
+
+```
+npm run test --ENV="local" --APPS="PythonWebService" --TAGS="@loginPythonWebServiceInvalidCredentials or @loginPythonWebServiceNormalUser or @loginPythonWebServiceEmptyCredentials or @loginPythonWebServiceAdminUser or @allTagsLoginPythonWebService" --BWSR="chrome"
 ```
