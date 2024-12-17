@@ -91,6 +91,18 @@ Deberías ver los contenedores practicas-1-dev y Mongo_DB_DEV_ENV corriendo en l
 
 Pruebas automatizadas
 Ejecución de tests en la aplicación "Academico Nebrija"
+Cinficuración de credenciales:
+1. Modifica el nombre del archivo: 
+
+```
+config.values.sample.json
+```
+
+```
+config.values.json
+```
+2. Añade tus credenciales de nebrija en validuser dentro del objeto users y del objeto passwords
+
 Main Page
 bash
 ```
