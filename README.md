@@ -46,6 +46,14 @@ cd Practicas_I
 cd Automation
 ```
 
+``` 
+cd Python-Flask-Web-Service-INT
+```
+Or
+``` 
+cd Python-Flask-Web-Service-DEV
+```
+
 Configurar archivos necesarios
 En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env.
 
@@ -67,9 +75,6 @@ DB_SETTINGS_COLLECTION=Settings
 DB_MESSAGES_COLLECTION=Messages
 ```
 Instala las dependencias:
-```
-cd Automation
-```
 ```
 npm install
 ```
