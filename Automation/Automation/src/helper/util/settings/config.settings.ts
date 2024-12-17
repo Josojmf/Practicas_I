@@ -3,7 +3,7 @@ import * as configData from './config.values.json';
 const users={
     "validuser":configData.users.validuser,
     "notvaliduser":configData.users.notvaliduser,
-    "validuserwrongpass":configData.users.validuserwrongpassusername,
+    "validuserwrongpass":configData.users.validuserwrongpass,
     "adminuserpython":configData.users.adminuserpython,
     "validuserpython":configData.users.validuserpython,
     "validuserpython2":configData.users.validuserpython2,
@@ -14,7 +14,7 @@ const users={
 const passwords={
     "validuser":configData.passwords.validuser,
     "notvaliduser":configData.passwords.notvaliduser,
-    "validuserwrongpass":configData.passwords.Validuserwrongpassusername,
+    "validuserwrongpass":configData.passwords.validuserwrongpass,
     "validuserpython":configData.passwords.validpasswordpython,
     "validuserpython2":configData.passwords.validpasswordpython2,
     "adminuserpython":configData.passwords.adminuserpython,
