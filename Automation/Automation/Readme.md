@@ -64,7 +64,7 @@ npx playwright install
         "emptyuser":""
     },
     "passwords":{
-        "validuser":"lyoko3110J",
+        "validuser":"",
         "notvaliduser":"notValidPassword",
         "Validuserwrongpassusername":"notValidPassword",
         "adminuserpython":"admin",
