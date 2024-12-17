@@ -44,24 +44,39 @@ npx playwright install
 #### Add user and password to file: " src\helper\util\settings\config.values.json "
 
 #### In format:
-
+```
 {
-"urls":{
-"BlackBoard":"https://campusvirtual.nebrija.es/",
-"AcademicoNebrija":"https://academico.nebrija.es/ServiciosApp"
-},
-"users":{
-"ValidUser":"validUser"@alumnos.nebrija.es",
-"NotValidUser":"notValidUser@notvalid.nope",
-"ValidUserWrongPassUsername":"validUser"@alumnos.nebrija.es"
-},
-"passwords":{
-"ValidPassword":"VALIDPASS",
-"NotValidPassword":"notValidPassword",
-"ValidUserWrongPassPassword":"notValidPassword"
+    "urls":{
+        "BlackBoard":"https://campusvirtual.nebrija.es/",
+        "AcademicoNebrija":"https://academico.nebrija.es/ServiciosApp",
+        "PythonWebService":"http://localhost:5005"
+    },
+    "users":{
+        "validuser":"jfernandezg15@alumnos.nebrija.es",
+        "notvaliduser":"notValidUser@notvalid.nope",
+        "validuserwrongpassusername":"jfernandezg15@alumnos.nebrija.es",
+        "adminuserpython":"admin",
+        "validuserpython":"testuser",
+        "validuserpython2":"testuser2",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"testuser",
+        "adminPython":"admin",
+        "emptyuser":""
+    },
+    "passwords":{
+        "validuser":"lyoko3110J",
+        "notvaliduser":"notValidPassword",
+        "Validuserwrongpassusername":"notValidPassword",
+        "adminuserpython":"admin",
+        "validpasswordpython":"test",
+        "validpasswordpython2":"test",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"notValidPassword",
+        "EmptyUser":""
+    }
 }
 }
-
+```
 #### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
 
 #### 3. Run tests form Academico nebrija App
