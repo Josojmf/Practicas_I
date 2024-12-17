@@ -92,8 +92,8 @@ DB_SETTINGS_COLLECTION=Settings
 DB_MESSAGES_COLLECTION=Messages
 ```
 <h1>Automation</h1>
-Instala las dependencias y configuración de automatización
-
+Proceso explicado para salir inmediatamente de la carpeta donde se ha construido con docker el aplicativo, por eso esta primera instrucción cd..
+Directorio de atumatización en Automation/Automation
 ```
 cd ..
 ```
