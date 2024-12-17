@@ -54,6 +54,27 @@ Or
 cd Python-Flask-Web-Service-DEV
 ```
 
+Ejecutar el contenedor con Docker Compose
+```
+docker-compose up --build -d
+```
+Or pull from dockerhub
+```
+docker build -t josojmf/practicas-i-dev:latest .
+```
+Or build project
+```
+docker build -t josojmf/practicas-i-int:latest .
+```
+
+Verificar contenedores activos
+```
+docker ps
+```
+Deberías ver los contenedores practicas-1-dev y Mongo_DB_DEV_ENV corriendo en los puertos 5000 (web) y 27017 (MongoDB).
+
+
+
 Configurar archivos necesarios
 En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env.
 
@@ -142,24 +163,7 @@ Or
 cd Python-Flask-Web-Service-INT
 ```
 
-Ejecutar el contenedor con Docker Compose
-```
-docker-compose up --build -d
-```
-Or pull from dockerhub
-```
-docker build -t josojmf/practicas-i-dev:latest .
-```
-Or build project
-```
-docker build -t josojmf/practicas-i-int:latest .
-```
 
-Verificar contenedores activos
-```
-docker ps
-```
-Deberías ver los contenedores practicas-1-dev y Mongo_DB_DEV_ENV corriendo en los puertos 5000 (web) y 27017 (MongoDB).
 
 Pruebas automatizadas
 Ejecución de tests en la aplicación "Academico Nebrija"
