@@ -76,11 +76,8 @@ Deberías ver los contenedores practicas-1-dev y Mongo_DB_DEV_ENV corriendo en l
 
 
 Configurar archivos necesarios
-En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env. si no se ha construido con docker
+En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env. Si no se ha construido con docker
 
-```
-mv .env.sample .env
-```
 Edita el archivo .env con las credenciales necesarias:
 
 env
@@ -94,7 +91,10 @@ DB_LOGS_COLLECTION=Logs
 DB_SETTINGS_COLLECTION=Settings
 DB_MESSAGES_COLLECTION=Messages
 ```
-Instala las dependencias y configuración de automatización
+<h1>Automation</h1>
+Proceso explicado para salir inmediatamente de la carpeta donde se ha construido con docker el aplicativo, por eso esta primera instrucción cd..<br></br>
+Directorio de atumatización en Automation/Automation<br></br>
+
 ```
 cd ..
 ```
@@ -143,24 +143,6 @@ Copy this on Automation\Automation\src\helper\util\settings\config.values.json p
 
 ```
 #### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
-
-#### Construcción y ejecución del contenedor Docker
-Construir la imagen Docker
-Desde la carpeta raíz del proyecto:
-
-```
-cd .\Automation\
-```
-```
-cd .\Automation\
-```
-```
-cd Python-Flask-Web-Service-DEV
-```
-Or
-```
-cd Python-Flask-Web-Service-INT
-```
 
 
 
