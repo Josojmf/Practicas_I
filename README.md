@@ -129,13 +129,32 @@ Construir la imagen Docker
 Desde la carpeta raíz del proyecto:
 
 ```
-docker build -t josojmf/practicas-i-dev:latest .
+cd .\Automation\
+```
+```
+cd .\Automation\
+```
+```
+cd Python-Flask-Web-Service-DEV
+```
+Or
+```
+cd Python-Flask-Web-Service-INT
 ```
 
 Ejecutar el contenedor con Docker Compose
 ```
 docker-compose up --build -d
 ```
+Or pull from dockerhub
+```
+docker build -t josojmf/practicas-i-dev:latest .
+```
+Or build project
+```
+docker build -t josojmf/practicas-i-int:latest .
+```
+
 Verificar contenedores activos
 ```
 docker ps
