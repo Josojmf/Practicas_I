@@ -41,6 +41,11 @@ git clone https://github.com/Josojmf/Practicas_I.git
 ```
 cd Practicas_I
 ```
+
+```
+cd Automation
+```
+
 Configurar archivos necesarios
 En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env.
 
