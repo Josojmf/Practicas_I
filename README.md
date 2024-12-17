@@ -84,7 +84,6 @@ mv .env.sample .env
 Edita el archivo .env con las credenciales necesarias:
 
 env
-Copiar código
 ```
 DB_USERNAME=joso
 DB_PASSWORD=test123
