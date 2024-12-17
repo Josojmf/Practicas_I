@@ -76,11 +76,8 @@ Deberías ver los contenedores practicas-1-dev y Mongo_DB_DEV_ENV corriendo en l
 
 
 Configurar archivos necesarios
-En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env. si no se ha construido con docker
+En la carpeta raíz del proyecto, renombra el archivo .env.sample a .env. Si no se ha construido con docker
 
-```
-mv .env.sample .env
-```
 Edita el archivo .env con las credenciales necesarias:
 
 env
@@ -94,7 +91,9 @@ DB_LOGS_COLLECTION=Logs
 DB_SETTINGS_COLLECTION=Settings
 DB_MESSAGES_COLLECTION=Messages
 ```
+<h1>Automation</h1>
 Instala las dependencias y configuración de automatización
+
 ```
 cd ..
 ```
