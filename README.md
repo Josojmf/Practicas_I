@@ -144,24 +144,6 @@ Copy this on Automation\Automation\src\helper\util\settings\config.values.json p
 ```
 #### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
 
-#### Construcción y ejecución del contenedor Docker
-Construir la imagen Docker
-Desde la carpeta raíz del proyecto:
-
-```
-cd .\Automation\
-```
-```
-cd .\Automation\
-```
-```
-cd Python-Flask-Web-Service-DEV
-```
-Or
-```
-cd Python-Flask-Web-Service-INT
-```
-
 
 
 Pruebas automatizadas
