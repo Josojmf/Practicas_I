@@ -1,0 +1,14 @@
+### Logout Test: logout.yml
+config:
+  target: "http://46.101.243.4:5005" # Base URL
+  phases:
+    - duration: 60   # Duration of the test in seconds
+      arrivalRate: 100 # Requests per second
+
+scenarios:
+  - name: User logs out
+    flow:
+      - get:
+          url: "/logout"
+          headers:
+            Cookie: "{{ session_cookie }}"

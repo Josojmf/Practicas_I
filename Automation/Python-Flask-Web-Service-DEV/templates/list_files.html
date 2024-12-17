@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}Available Files{% endblock %}
+
+{% block content %}
+{% if settings.get('maintenance_mode') %}
+    <div class="maintenance-message">
+        <h1>Page is under maintenance</h1>
+        <p>Sorry for the inconvenience.</p>
+    </div>
+{% else %}
+    <header class="page-header">
+        <h1>Available Files</h1>
+    </header>
+
+    <div class="container">
+        <!-- Flash Messages Container -->
+        <div id="flash-messages"></div>
+
+        <!-- File Upload Form -->
+        <form id="upload-form" enctype="multipart/form-data" class="file-upload-form">
+            <label for="file" class="file-label">Upload a File</label>
+            <div class="file-upload">
+                <input type="file" id="file" name="file" accept=".pdf" class="file-input" required>
+                <button type="button" id="upload-button" class="btn upload-btn">Upload</button>
+            </div>
+        </form>
+
+        <!-- List of Files -->
+        <ul class="file-list">
+            {% for file in files %}
+                <li class="file-item">
+                    <a href="{{ url_for('main.download_file', filename=file) }}" class="file-link">
+                        {{ file }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('upload-button').addEventListener('click', function () {
+            const form = document.getElementById('upload-form');
+            const formData = new FormData(form);
+            const flashMessages = document.getElementById('flash-messages');
+
+            // Clear previous messages
+            flashMessages.innerHTML = '';
+
+            fetch('{{ url_for("main.upload_file") }}', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `flash-message ${data.status}`;
+                    messageDiv.textContent = data.message;
+                    flashMessages.appendChild(messageDiv);
+
+                    if (data.status === 'success') {
+                        // Reload the page to show updated file list
+                        setTimeout(() => {
+                            location.reload();
+                        }, 2000);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'flash-message error';
+                    messageDiv.textContent = 'An error occurred while uploading the file.';
+                    flashMessages.appendChild(messageDiv);
+                });
+        });
+    </script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+### Home Page Test: home.yml
+config:
+  target: "http://46.101.243.4:5005" # Base URL
+  phases:
+    - duration: 60   # Duration of the test in seconds
+      arrivalRate: 100 # Requests per second
+
+scenarios:
+  - name: User views home page
+    flow:
+      - get:
+          url: "/"
+          headers:
+            Cookie: "{{ session_cookie }}" # Include captured session cookie

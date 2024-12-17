@@ -1,0 +1,47 @@
+config:
+  target: "http://46.101.243.4:5005" # Base URL
+  phases:
+    - duration: 60   # Duration of the test in seconds
+      arrivalRate: 100 # Requests per second
+  plugins:
+    http:
+      auth:
+        strategy: cookie # Use cookies for session-based authentication
+
+scenarios:
+  - name: Full user flow
+    flow:
+      - post: # User logs in
+          url: "/login"
+          json:
+            username: "testuser"
+            password: "password"
+          capture:
+            - headers:
+                set-cookie: session_cookie # Capture session cookie
+              as: session_cookie # Store captured data in this variable
+
+      - get: # User views home page
+          url: "/"
+          headers:
+            Cookie: "{{ session_cookie }}" # Include captured session cookie
+
+      - get: # User checks weather
+          url: "/weather"
+          qs:
+            city: "New York"
+          headers:
+            Cookie: "{{ session_cookie }}"
+
+      - post: # User uploads a file
+          url: "/upload"
+          headers:
+            Cookie: "{{ session_cookie }}"
+            Content-Type: "multipart/form-data"
+          formData:
+            file: "@/path/to/testfile.pdf"
+
+      - get: # User logs out
+          url: "/logout"
+          headers:
+            Cookie: "{{ session_cookie }}"

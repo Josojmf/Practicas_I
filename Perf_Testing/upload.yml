@@ -1,0 +1,17 @@
+### File Upload Test: upload.yml
+config:
+  target: "http://46.101.243.4:5005" # Base URL
+  phases:
+    - duration: 60   # Duration of the test in seconds
+      arrivalRate: 100 # Requests per second
+
+scenarios:
+  - name: User uploads a file
+    flow:
+      - post:
+          url: "/upload"
+          headers:
+            Cookie: "{{ session_cookie }}"
+            Content-Type: "multipart/form-data"
+          formData:
+            file: "@/path/to/testfile.pdf"

@@ -1,0 +1,19 @@
+### Login Test for All Users: login-all-users.yml
+config:
+  target: "http://46.101.243.4:5005" # Base URL
+  phases:
+    - duration: 60   # Test duration in seconds
+      arrivalRate: 100 # Requests per second
+  payload:
+    - path: users.csv # Path to your CSV file
+      fields:
+        - username
+        - password
+scenarios:
+  - name: User login
+    flow:
+      - post: # Login request
+          url: "/login"
+          json:
+            username: "{{ username }}" # Replace with username from CSV
+            password: "{{ password }}" # Replace with password from CSV
