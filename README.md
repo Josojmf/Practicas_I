@@ -81,7 +81,42 @@ npm install
 ```
 npx playwright install
 ```
-Construcción y ejecución del contenedor Docker
+```
+{
+    "urls":{
+        "BlackBoard":"https://campusvirtual.nebrija.es/",
+        "AcademicoNebrija":"https://academico.nebrija.es/ServiciosApp",
+        "PythonWebService":"http://localhost:5005"
+    },
+    "users":{
+        "validuser":"jfernandezg15@alumnos.nebrija.es",
+        "notvaliduser":"notValidUser@notvalid.nope",
+        "validuserwrongpassusername":"jfernandezg15@alumnos.nebrija.es",
+        "adminuserpython":"admin",
+        "validuserpython":"testuser",
+        "validuserpython2":"testuser2",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"testuser",
+        "adminPython":"admin",
+        "emptyuser":""
+    },
+    "passwords":{
+        "validuser":"",
+        "notvaliduser":"notValidPassword",
+        "Validuserwrongpassusername":"notValidPassword",
+        "adminuserpython":"admin",
+        "validpasswordpython":"test",
+        "validpasswordpython2":"test",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"notValidPassword",
+        "EmptyUser":""
+    }
+}
+
+```
+#### Subsitute "validuser" with your nebrija username and VALIDPASS with your nebrija pass
+
+#### Construcción y ejecución del contenedor Docker
 Construir la imagen Docker
 Desde la carpeta raíz del proyecto:
 
