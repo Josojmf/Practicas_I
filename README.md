@@ -1,6 +1,6 @@
 <h1> Practicas I José María Fernández </h1>
 
-# Repositorio Trabajo fin asignatura Practicas I José María Fernández Gómez
+# Repositorio Trabajo final asignatura Practicas I José María Fernández Gómez
 
 ## Tutor: Adolfo Abalo Cascallar
 
