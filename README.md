@@ -87,6 +87,8 @@ npm install
 ```
 npx playwright install
 ```
+Copy this on Automation\Automation\src\helper\util\settings\config.values.json putting in users.validuser your nebrija username and in passwords.validuser your nebrija password
+
 ```
 {
     "urls":{
