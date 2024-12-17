@@ -15,6 +15,7 @@ export default class FilesPage {
     logoutButton: "//html/body/div[1]/div/ul/li[2]/a",
     uploadFilesInput:"//html/body/div[2]/div/form/div/input",
     uploadFileButton: "text=Upload File",
+    errorMessage:"//html/body/div[2]/div/div/div"
   };
 
   async waitForNavigation() {
@@ -32,11 +33,18 @@ export default class FilesPage {
     await this.page.setInputFiles(this.elements.uploadFilesInput, filePath);
   }
 async clickUploadFileButton() {
-    await this.page.locator(this.elements.uploadFileButton).click();
+    await this.page.getByRole('button', { name: 'Upload' }).click();
   }
 async isFileUploaded(fileName: string) {
     const fileUploaded = await this.page.locator(`text=${fileName}`).isVisible();
     return fileUploaded;
+  }
+
+  async isErrorMessageDisplayed() {
+    const errorMessage = await this.page.locator(this.elements.errorMessage);
+    console.log(errorMessage);
+    await this.page.pause();
+    return errorMessage;
   }
 
 

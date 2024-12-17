@@ -27,3 +27,11 @@ Feature: Chat page validation
         Then User logs in as "validuserpython2"
         When User is in the "chat" page
         Then I should see the message with text "hello" in the chat window
+    @testchatLostConnection
+    Scenario: Message should be sent even if connection is lost
+        When User is in the "chat" page
+        When I enter "HelloLostConnection1234" in the message box
+        And I click on send button
+        And User disconnects from the internet inmeddiateley
+        And User reconnects to the internet
+        Then I should see the message with text "HelloLostConnection1234" in the chat window

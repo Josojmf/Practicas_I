@@ -11,3 +11,4 @@ Feature: Register Feature
         Given User is in the register page
         When I enter existing credentials credentials for registration
         Then I should see error message
+    

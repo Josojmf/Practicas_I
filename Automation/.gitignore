@@ -16,3 +16,8 @@ Automation/.docker_temp_963822643
 Automation/Python-Flask-Web-Service.7z
 Automation/python-flask-web-service.tar
 Automation/Python-Flask-Web-Service/python-flask-web-service.tar
+*.tar
+*.7z
+*.zip
+*.gz
+*.log

@@ -50,6 +50,7 @@ Then("User uploads file {string}", async (fileName: string) => {
   const filePath = `./src/assets/${fileName}.pdf`;
   FilesP.uploadFile(filePath);
   FilesP.clickUploadFileButton();
+  await pageF.page.waitForTimeout(2000);
   FilesP.waitForNavigation();
 });
 
@@ -57,6 +58,12 @@ Then("User should see the file {string} uploaded successfully", async (fileName:
   FilesP = new FilesPage(pageF.page);
   const fileUploaded = await FilesP.isFileUploaded(fileName);
   expect(fileUploaded).toBeTruthy();
+});
+
+Then('User should see error message File size is too big', async function () {
+  FilesP = new FilesPage(pageF.page);
+  const errorMessage = await FilesP.isErrorMessageDisplayed();
+  expect(errorMessage).toBeTruthy();
 });
 
 

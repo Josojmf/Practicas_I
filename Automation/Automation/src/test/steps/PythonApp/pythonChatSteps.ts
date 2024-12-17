@@ -6,7 +6,7 @@ import {
   After,
   BeforeAll,
 } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
+import { BrowserContext, expect } from "@playwright/test";
 import { chromium, Browser, Page } from "playwright";
 import LoginPage from "../../../pages/PythonWebServicePages/loginPage";
 import HomePage from "../../../pages/PythonWebServicePages/homePage";
@@ -16,12 +16,14 @@ import FilesPage from "../../../pages/PythonWebServicePages/FilesPage";
 import { AdminPage } from "../../../pages/PythonWebServicePages/AdminPage";
 
 let browser: Browser;
+let context: BrowserContext;
 let page: Page;
 let loginP: LoginPage;
 let chatpP: ChatPage;
 let homeP: HomePage;
 let FilesP: FilesPage;
 let adminP: AdminPage;
+
 
 // Before and After hooks to manage browser lifecycle
 
@@ -85,6 +87,18 @@ When("I enter {string} in the message box", async (message: string) => {
 When("I click on send button", async () => {
   chatpP = new ChatPage(pageF.page);
   await chatpP.clickSendButton();
+});
+
+When('User disconnects from the internet inmeddiateley', async function () {
+   browser = await chromium.launch();
+   context = await browser.newContext();
+   page = await context.newPage();
+  await context.setOffline(true);
+});
+
+When("User reconnects to the internet", async () => {
+  context = await browser.newContext();
+  await context.setOffline(false);
 });
 
 Then(

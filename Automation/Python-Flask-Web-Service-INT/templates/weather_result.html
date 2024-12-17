@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Interface{% endblock %}
+
+{% block content %}
+
+{% if settings.get('maintenance_mode') %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Mode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="maintenance-message">
+        <h1>Page is under maintenance</h1>
+        <p>Sorry for the inconvenience.</p>
+    </div>
+</body>
+</html>
+{% else %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Weather Results</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather in {{ weather.city }}</h1>
+    </header>
+
+    <div class="container">
+        <p>Temperature: {{ weather.temperature }}°C</p>
+        <p>Description: {{ weather.description }}</p>
+        <p>Wind Speed: {{ weather.wind_speed }} km/h</p>
+        <p>Humidity: {{ weather.humidity }}%</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 File Upload Service</p>
+    </footer>
+</body>
+</html>
+{% endif %}
+{% endblock %}

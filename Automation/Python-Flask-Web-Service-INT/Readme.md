@@ -104,40 +104,108 @@ Admins have access to additional features to manage the platform:
 --- 
 ## Build
 
-### Docker 
-1. 
-```
- docker build -t python-flask-web-service .
+# Python Flask Web Service - INT
 
- ```
- 2. 
- ```
-docker save -o python-flask-web-service.tar python-flask-web-service:latest
- ```
- 3. 
- ```
-docker run -p 5000:5000 --env-file .env python-flask-web-service
- ```
- OR. 
-```
-docker-compose up --build
-docker-compose -f docker-compose.yml up --build
-```
+## Overview
 
- #### Then Image should be available to run from docker desktop if system is halted
+This project is a Python Flask web service integrated with MongoDB, designed for automation testing and streamlined development. It uses Docker for containerization.
 
-Each functionality and admin option is designed to support automation testing . 
+---
 
-## Just run Application
+## Build and Deploy with Docker
 
-1. 
-```
-pip install requirements.txt
-```
+### **Build the Docker Image**
+1. Build the Docker image locally and tag it appropriately:
+   ```bash
+   docker build -t josojmf/practicas-i-int:17-12-2024 .
+   ```
 
-2. 
-```
-python main.py       
-```
+2. Verify the built image:
+   ```bash
+   docker images
+   ```
 
-Happy Testing! 🚀
+### **Push to Docker Hub**
+1. Log in to your Docker Hub account:
+   ```bash
+   docker login
+   ```
+
+2. Push the image to Docker Hub:
+   ```bash
+   docker push josojmf/practicas-i-int:17-12-2024
+   ```
+
+---
+
+### **Run on Another Computer**
+
+To download and run the image from **Docker Hub**, follow these steps:
+
+1. Pull the image:
+   ```bash
+   docker pull josojmf/practicas-i-int:17-12-2024
+   ```
+
+2. Create a `docker-compose.yml` file with the following content:
+
+   ```yaml
+   version: "3.8"
+
+   services:
+     web:
+       image: josojmf/practicas-i-int:17-12-2024
+       container_name: practicas-1-int
+       ports:
+         - "5000:5000"
+       environment:
+         DB_USERNAME: joso
+         DB_PASSWORD: test123
+         DB_CLUSTER: mongo
+         DB_NAME: Practicas_I_Automation_Project
+         DB_USERS_COLLECTION: Users
+       depends_on:
+         - mongo
+
+     mongo:
+       image: mongo:6.0
+       container_name: Mongo_DB_INT_ENV
+       ports:
+         - "27017:27017"
+       environment:
+         MONGO_INITDB_ROOT_USERNAME: joso
+         MONGO_INITDB_ROOT_PASSWORD: test123
+       volumes:
+         - mongo_data:/data/db
+
+   volumes:
+     mongo_data:
+   ```
+
+3. Run the container:
+   ```bash
+   docker-compose up -d
+   ```
+
+4. Verify the running containers:
+   ```bash
+   docker ps
+   ```
+
+---
+
+### **Just Run the Application Without Docker**
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the application:
+   ```bash
+   python main.py
+   ```
+
+---
+
+**Happy Testing! 🚀**
