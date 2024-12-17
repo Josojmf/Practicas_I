@@ -74,7 +74,7 @@ DB_LOGS_COLLECTION=Logs
 DB_SETTINGS_COLLECTION=Settings
 DB_MESSAGES_COLLECTION=Messages
 ```
-Instala las dependencias:
+Instala las dependencias y configuración de automatización
 ```
 cd ..
 ```
