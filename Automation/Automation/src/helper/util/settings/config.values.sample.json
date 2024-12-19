@@ -1,0 +1,30 @@
+{
+    "urls":{
+        "BlackBoard":"https://campusvirtual.nebrija.es/",
+        "AcademicoNebrija":"https://academico.nebrija.es/ServiciosApp",
+        "PythonWebService":"http://46.101.243.4:5005/"
+    },
+    "users":{
+        "validuser":"jfernandezg15@alumnos.nebrija.es",
+        "notvaliduser":"notValidUser@notvalid.nope",
+        "validuserwrongpassusername":"jfernandezg15@alumnos.nebrija.es",
+        "adminuserpython":"admin",
+        "validuserpython":"testuser",
+        "validuserpython2":"testuser2",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"testuser",
+        "adminPython":"admin",
+        "emptyuser":""
+    },
+    "passwords":{
+        "validuser":"",
+        "notvaliduser":"notValidPassword",
+        "Validuserwrongpassusername":"notValidPassword",
+        "adminuserpython":"admin",
+        "validpasswordpython":"test",
+        "validpasswordpython2":"test",
+        "notvaliduserpython":"notValidUser",
+        "validuserwrongpasspython":"notValidPassword",
+        "EmptyUser":""
+    }
+}
