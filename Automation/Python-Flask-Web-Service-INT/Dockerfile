@@ -14,9 +14,5 @@ COPY . .
 # Expose port 5005 for Flask
 EXPOSE 5005
 
-# Set environment variables for Flask
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
-
-# Start the Flask app
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Set the default command to run the Flask app
+CMD ["python", "main.py"]
