@@ -2,18 +2,23 @@ version: "3.8"
 
 services:
   web:
-    image: josojmf/practicas-i-int:17-12-2024
+    image: josojmf/practicas-i-int:latest
     container_name: practicas-1-int
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "5005:5005"
     environment:
       DB_USERNAME: joso
       DB_PASSWORD: test123
       DB_CLUSTER: mongo
       DB_NAME: Practicas_I_Automation_Project
       DB_USERS_COLLECTION: Users
+      FLASK_DEBUG: 1
     depends_on:
-      - mongo
+      mongo:
+        condition: service_healthy
 
   mongo:
     image: mongo:6.0
@@ -25,6 +30,11 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: test123
     volumes:
       - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   mongo_data:
